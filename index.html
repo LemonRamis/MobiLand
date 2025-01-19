@@ -4,16 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-    <!-- Метаописание для SEO -->
     <meta name="description" content="Качественный ремонт цифровой техники в Республике Казахстан: смарт-ТВ, ноутбуков, принтеров и многое другое. Свяжитесь с нами для подробностей!">
-    <!-- Подключение шрифтов Google -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Подключение стилей -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Стили для выделения отзывов */
+        .review-item {
+            background-color: #f4f4f4; /* Легкий серый фон */
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 5px solid #ff9e00; /* Оранжевая линия слева */
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-item p {
+            font-style: italic;
+            color: #333;
+        }
+
+        .review-item .customer-name {
+            font-weight: bold;
+            color: #ff9e00; /* Цвет для имен */
+        }
+
+        .review-item .customer-location {
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* Стили для выделения заголовков */
+        h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Добавление акцентов в дизайне */
+        .welcome-section h1 {
+            color: #ff9e00; /* Оранжевый цвет для заголовка */
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .advantages-section h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Кнопка контакта */
+        .contact-btn-container a {
+            background-color: #ff9e00; /* Оранжевый фон */
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <!-- Меню навигации -->
         <nav class="navbar">
             <a href="index.html" class="nav-link">Главная</a>
             <a href="services.html" class="nav-link">Услуги</a>
@@ -22,7 +80,6 @@
         </nav>
     </header>
     
-    <!-- Раздел приветствия -->
     <section class="welcome-section">
         <h1>Профессиональный ремонт с гарантией качества!</h1>
         <p>Мы восстанавливаем вашу технику быстро и надежно, гарантируя её долговечность. Мы работаем с:</p>
@@ -35,7 +92,6 @@
         <p>Доверьте вашу технику настоящим профессионалам и будьте уверены в её работоспособности.</p>
     </section>
 
-    <!-- Раздел с преимуществами -->
     <section class="advantages-section">
         <h2>Почему выбирают нас?</h2>
         <ul class="advantages-list">
@@ -46,29 +102,30 @@
         </ul>
     </section>
 
-    <!-- Раздел с отзывами -->
     <section class="reviews-section">
         <h2>Что говорят наши клиенты</h2>
         <div class="reviews-container">
             <div class="review-item">
-                <p>"Отличный сервис! Очень быстро починили мой ноутбук, теперь работает как новый!" — Анна, Алматы</p>
+                <p>"Отличный сервис! Очень быстро починили мой ноутбук, теперь работает как новый!" — <span class="customer-name">Айжан, Алматы</span></p>
+                <p class="customer-location">Алматы</p>
             </div>
             <div class="review-item">
-                <p>"Ремонт смарт-ТВ прошел на высшем уровне. Вежливые мастера и хорошее качество работы." — Игорь, Конаев</p>
+                <p>"Ремонт смарт-ТВ прошел на высшем уровне. Вежливые мастера и хорошее качество работы." — <span class="customer-name">Аслан, Конаев</span></p>
+                <p class="customer-location">Конаев</p>
             </div>
             <div class="review-item">
-                <p>"Очень доволен обслуживанием. Быстро, качественно и с гарантией." — Павел, Нур-Султан</p>
+                <p>"Очень доволен обслуживанием. Быстро, качественно и с гарантией." — <span class="customer-name">Марина, Нур-Султан</span></p>
+                <p class="customer-location">Конаев</p>
             </div>
         </div>
     </section>
 
-    <!-- Раздел с кнопкой связи -->
     <div class="contact-btn-container">
         <a href="contact.html" class="contact-btn">Связаться с нами</a>
     </div>
 
     <footer>
-        <p>© 2025, MobiLand. Все права защищены.</p>
+        <p>© 2025, Ваша компания. Все права защищены.</p>
     </footer>
 </body>
 </html>
