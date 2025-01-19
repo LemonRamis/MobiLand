@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
+    <!-- Метаописание для SEO -->
+    <meta name="description" content="Свяжитесь с нами для получения консультации или информации о наших услугах.">
+    <meta name="keywords" content="контакты, ремонт, услуги, телефон, сообщение">
+    <!-- Подключение шрифтов Google -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Подключение CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +17,8 @@
         <nav>
             <a href="index.html">Главная</a> |
             <a href="services.html">Услуги</a> |
-            <a href="contact.html">Контакты</a>
+            <a href="contact.html">Контакты</a> |
+            <a href="location.html">Геолокация</a>
         </nav>
     </header>
     
@@ -50,10 +56,27 @@
             
             <button type="submit">Отправить</button>
         </form>
+
+        <!-- Благодарственное сообщение -->
+        <div class="thank-you-message" style="display: none;">
+            Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.
+        </div>
     </section>
 
     <footer>
         <p>© 2025, Ваша компания. Все права защищены.</p>
     </footer>
+
+    <!-- Скрипт для отображения сообщения после отправки -->
+    <script>
+        const form = document.querySelector('.contact-form');
+        const thankYouMessage = document.querySelector('.thank-you-message');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Остановить стандартное поведение формы
+            thankYouMessage.style.display = 'block'; // Показать благодарственное сообщение
+            form.style.display = 'none'; // Скрыть форму
+        });
+    </script>
 </body>
 </html>
