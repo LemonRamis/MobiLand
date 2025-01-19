@@ -1,24 +1,93 @@
-/* Стили для страницы услуг */
+/* Основные цвета */
+:root {
+    --primary-color: #1F2937; /* Темно-серый для фона шапки и подвала */
+    --secondary-color: #FF7F00; /* Яркий оранжевый для акцентов */
+    --background-color: #F8F9FA; /* Светлый фон для страницы */
+    --text-color: #333333; /* Темный текст */
+    --header-color: #FF6A00; /* Оранжевый для заголовков */
+    --section-background: #E0E0E0; /* Светло-серый для разделов */
+    --button-bg-color: #007BFF; /* Голубой для кнопок */
+    --button-bg-hover: #0056b3; /* Темно-синий для кнопок при наведении */
+    --link-hover-color: #ffcc00; /* Желтый для ссылок при наведении */
+    --service-item-bg: #f4f4f9; /* Светлый фон для услуг */
+    --service-item-hover-bg: #28a745; /* Зеленый для услуг при наведении */
+}
+
+/* Основной фон */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Шапка */
+header {
+    background-color: var(--primary-color);
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s, transform 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: var(--link-hover-color);
+    transform: scale(1.1);
+}
+
+/* Навигационное меню */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--link-hover-color);
+    transform: scale(1.1);
+}
+
+.nav-link:active, .nav-link:focus {
+    color: var(--link-hover-color);
+    outline: none;
+}
+
+/* Разделы */
 .services-section {
     padding: 50px 20px;
     text-align: center;
-    background-color: #40E0D0; /* Бирюзовый фон для всей секции */
+    background-color: var(--secondary-color);
     margin: 20px auto;
     border-radius: 8px;
     max-width: 800px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Заголовок для услуг */
 .services-section h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #444;
+    color: #fff;
     margin-bottom: 30px;
-    animation: fadeInUp 1s 0.5s forwards; /* Плавное появление заголовка */
+    animation: fadeInUp 1s 0.5s forwards;
 }
 
-/* Стили для списка услуг */
 .services-list {
     list-style: none;
     padding: 0;
@@ -29,28 +98,26 @@
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: #555;
-    background-color: #f4f4f9;
+    background-color: var(--service-item-bg);
     padding: 15px;
     margin: 10px 0;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    opacity: 0; /* Начинаем с невидимости */
-    animation: fadeInUp 1s forwards; /* Плавное появление с сдвигом */
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
 }
 
-/* Анимация для каждого элемента списка */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Элемент будет сдвигаться снизу */
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
-        transform: translateY(0); /* Элемент станет на своем месте */
+        transform: translateY(0);
     }
 }
 
-/* Задержка анимации для каждого элемента списка */
 .service-item:nth-child(1) {
     animation-delay: 0.2s;
 }
@@ -75,14 +142,14 @@
     animation-delay: 1.2s;
 }
 
-/* Плавный переход при наведении на элементы */
 .service-item:hover {
-    background-color: #28a745; /* Зеленый цвет при наведении */
+    background-color: var(--service-item-hover-bg);
     color: white;
-    transform: scale(1.05); /* Элемент немного увеличивается */
+    transform: scale(1.05);
     transition: all 0.3s ease;
 }
-/* Стили для кнопки "Связаться с нами" */
+
+/* Контактная кнопка */
 .contact-btn-container {
     position: fixed;
     bottom: 20px;
@@ -91,7 +158,7 @@
 }
 
 .contact-btn {
-    background-color: #007BFF;
+    background-color: var(--button-bg-color);
     color: white;
     padding: 15px 20px;
     font-size: 16px;
@@ -102,10 +169,11 @@
 }
 
 .contact-btn:hover {
-    background-color: #0056b3;
+    background-color: var(--button-bg-hover);
     transform: scale(1.1);
 }
-/* Стили для раздела контактов */
+
+/* Контактная форма */
 .contact-section {
     padding: 20px;
     max-width: 600px;
@@ -116,12 +184,7 @@
 .contact-section h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
-    color: #007BFF;
-    margin-bottom: 20px;
-}
-
-.contact-section p {
-    font-size: 1rem;
+    color: var(--button-bg-color);
     margin-bottom: 20px;
 }
 
@@ -152,7 +215,7 @@
 }
 
 .contact-form button {
-    background-color: #007BFF;
+    background-color: var(--button-bg-color);
     color: white;
     padding: 10px 20px;
     font-size: 1rem;
@@ -163,71 +226,40 @@
 }
 
 .contact-form button:hover {
-    background-color: #0056b3;
+    background-color: var(--button-bg-hover);
 }
-/* Стили для раздела с геолокацией */
+
+/* Геолокация */
 .location-section {
-    padding: 20px; /* Внутренние отступы */
-    max-width: 800px; /* Максимальная ширина */
-    margin: 0 auto; /* Центрирование по горизонтали */
-    text-align: center; /* Центрирование текста */
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .location-section h1 {
-    font-family: 'Montserrat', sans-serif; /* Шрифт заголовка */
-    font-size: 2rem; /* Размер шрифта */
-    color: #007BFF; /* Цвет текста */
-    margin-bottom: 20px; /* Отступ снизу */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: var(--button-bg-color);
+    margin-bottom: 20px;
 }
 
 .map-container {
-    margin-top: 20px; /* Отступ сверху для карты */
-    border: 2px solid #ccc; /* Рамка вокруг карты */
-    border-radius: 10px; /* Закругленные углы */
-    overflow: hidden; /* Убираем возможные скроллы */
-}
-/* Стили для навигационного меню */
-.navbar {
-    display: flex; /* Выравнивание элементов по горизонтали */
-    justify-content: center; /* Центрируем элементы по горизонтали */
-    align-items: center; /* Центрируем элементы по вертикали */
-    background-color: #333; /* Цвет фона */
-    padding: 10px 0; /* Отступы сверху и снизу */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для придания глубины */
-    flex-wrap: wrap; /* Автоматический перенос элементов, если не помещаются */
-}
-
-.nav-link {
-    color: #fff; /* Белый цвет текста */
-    text-decoration: none; /* Убираем подчеркивание */
-    font-family: 'Roboto', sans-serif; /* Используем шрифт Roboto */
-    font-size: 16px; /* Размер шрифта */
-    margin: 0 10px; /* Уменьшенные отступы между ссылками */
-    transition: color 0.3s, transform 0.3s ease-in-out; /* Плавный переход для эффектов */
-}
-
-/* Эффект наведения */
-.nav-link:hover {
-    color: #ffcc00; /* Цвет текста при наведении */
-    transform: scale(1.1); /* Легкое увеличение при наведении */
-}
-
-/* Стили для активной ссылки */
-.nav-link:active, .nav-link:focus {
-    color: #ffcc00; /* Цвет для активной или фокусной ссылки */
-    outline: none; /* Убираем обводку при фокусе */
+    margin-top: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 /* Медиазапрос для мобильных устройств */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Меняем расположение на вертикальное */
-        padding: 20px 0; /* Увеличиваем отступы на мобильных */
+        flex-direction: column;
+        padding: 20px 0;
     }
 
     .nav-link {
-        margin: 5px 0; /* Уменьшаем отступы между ссылками для мобильных */
-        font-size: 18px; /* Увеличиваем шрифт для мобильных */
+        margin: 5px 0;
+        font-size: 18px;
     }
 }
-
