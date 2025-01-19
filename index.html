@@ -126,6 +126,77 @@
             background-color: var(--button-bg-hover);
             transform: scale(1.05);
         }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 768px) {
+            .welcome-section h1 {
+                font-size: 1.5rem; /* Уменьшаем размер заголовка */
+            }
+
+            .welcome-section p {
+                font-size: 1rem; /* Уменьшаем размер текста */
+            }
+
+            .welcome-section ul li {
+                font-size: 1rem; /* Уменьшаем размер списка */
+            }
+
+            .advantages-section h2 {
+                font-size: 1.5rem; /* Уменьшаем размер заголовка */
+            }
+
+            .advantages-list li {
+                font-size: 1rem; /* Уменьшаем размер текста */
+            }
+
+            .reviews-section h2 {
+                font-size: 1.5rem; /* Уменьшаем размер заголовка */
+            }
+
+            .review-item {
+                font-size: 1rem; /* Уменьшаем размер текста в отзывах */
+            }
+
+            .contact-btn {
+                font-size: 1rem; /* Уменьшаем размер кнопки */
+                padding: 12px 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .welcome-section h1 {
+                font-size: 1.2rem; /* Уменьшаем размер заголовка для маленьких экранов */
+            }
+
+            .welcome-section p {
+                font-size: 0.9rem; /* Уменьшаем размер текста */
+            }
+
+            .welcome-section ul li {
+                font-size: 0.9rem; /* Уменьшаем размер списка */
+            }
+
+            .advantages-section h2 {
+                font-size: 1.3rem; /* Уменьшаем размер заголовка */
+            }
+
+            .advantages-list li {
+                font-size: 0.9rem; /* Уменьшаем размер текста */
+            }
+
+            .reviews-section h2 {
+                font-size: 1.3rem; /* Уменьшаем размер заголовка */
+            }
+
+            .review-item {
+                font-size: 0.9rem; /* Уменьшаем размер текста в отзывах */
+            }
+
+            .contact-btn {
+                font-size: 0.9rem; /* Уменьшаем размер кнопки */
+                padding: 10px 20px;
+            }
+        }
     </style>
 </head>
 <body>
