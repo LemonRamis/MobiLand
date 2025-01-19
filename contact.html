@@ -1,17 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Контакты</h1>
-    <p>Адрес: г. Конаев, микрорайон 3, дом 14</p>
-    <p>Телефон: +7 (701) 997-22-64</p>
-    <p>Email: info@yourcompany.com</p>
-<h2>Как нас найти</h2>
-   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2157.9062381309554!2d77.058076126181!3d43.85151074367092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3882f1e84459c891%3A0x8bab6bf53e183833!2z0KHQldCg0JLQmNChLdCm0JXQndCi0KAtICJNT0JJTEFORCI!5e1!3m2!1sru!2sde!4v1737291649818!5m2!1sru!2sde" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <a href="index.html">На главную</a>
+    <header>
+        <nav>
+            <a href="index.html">Главная</a> |
+            <a href="services.html">Услуги</a> |
+            <a href="contact.html">Контакты</a>
+        </nav>
+    </header>
+    
+    <!-- Раздел контактов -->
+    <section class="contact-section">
+        <h1>Свяжитесь с нами</h1>
+        <p>Заполните форму ниже, и мы свяжемся с вами в ближайшее время!</p>
+
+        <!-- Форма обратной связи -->
+        <form
+          action="https://formspree.io/f/xnnnkrar"
+          method="POST"
+          class="contact-form"
+        >
+            <label>
+                Ваш номер телефона:
+                <input 
+                  type="tel" 
+                  name="phone" 
+                  placeholder="+7 777 123 4567" 
+                  pattern="^\+7\s?\d{3}\s?\d{3}\s?\d{4}$" 
+                  title="Введите номер в формате: +7 777 123 4567" 
+                  required
+                >
+            </label>
+            
+            <label>
+                Ваше сообщение:
+                <textarea 
+                  name="message" 
+                  placeholder="Напишите ваше сообщение..." 
+                  required
+                ></textarea>
+            </label>
+            
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025, Ваша компания. Все права защищены.</p>
+    </footer>
 </body>
 </html>
