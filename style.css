@@ -165,3 +165,24 @@
 .contact-form button:hover {
     background-color: #0056b3;
 }
+/* Стили для раздела с геолокацией */
+.location-section {
+    padding: 20px; /* Внутренние отступы */
+    max-width: 800px; /* Максимальная ширина */
+    margin: 0 auto; /* Центрирование по горизонтали */
+    text-align: center; /* Центрирование текста */
+}
+
+.location-section h1 {
+    font-family: 'Montserrat', sans-serif; /* Шрифт заголовка */
+    font-size: 2rem; /* Размер шрифта */
+    color: #007BFF; /* Цвет текста */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.map-container {
+    margin-top: 20px; /* Отступ сверху для карты */
+    border: 2px solid #ccc; /* Рамка вокруг карты */
+    border-radius: 10px; /* Закругленные углы */
+    overflow: hidden; /* Убираем возможные скроллы */
+}
