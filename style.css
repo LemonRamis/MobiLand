@@ -69,41 +69,7 @@ nav a:hover {
     outline: none;
 }
 
-/* Главная страница */
-.index-section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.index-section h1 {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--header-color);
-    margin-bottom: 20px;
-}
-
-/* Страница "Геолокация" */
-.location-section {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.location-section h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    color: var(--button-bg-color);
-    margin-bottom: 20px;
-}
-
-.map-container {
-    margin-top: 20px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-/* Страница "Услуги" */
+/* Разделы */
 .services-section {
     padding: 50px 20px;
     text-align: center;
@@ -126,19 +92,20 @@ nav a:hover {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .service-item {
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     color: #555;
     background-color: var(--service-item-bg);
-    padding: 15px;
-    margin: 10px 0;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    animation: fadeInUp 1s forwards;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 @keyframes fadeInUp {
@@ -180,7 +147,6 @@ nav a:hover {
     background-color: var(--service-item-hover-bg);
     color: white;
     transform: scale(1.05);
-    transition: all 0.3s ease;
 }
 
 /* Контактная кнопка */
@@ -263,21 +229,26 @@ nav a:hover {
     background-color: var(--button-bg-hover);
 }
 
-/* Страница "О нас" */
-.about-section {
-    padding: 50px 20px;
+/* Геолокация */
+.location-section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.about-section h1 {
+.location-section h1 {
     font-family: 'Montserrat', sans-serif;
-    color: var(--header-color);
+    font-size: 2rem;
+    color: var(--button-bg-color);
     margin-bottom: 20px;
 }
 
-.about-section p {
-    font-size: 18px;
-    color: var(--text-color);
+.map-container {
+    margin-top: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 /* Медиазапрос для мобильных устройств */
