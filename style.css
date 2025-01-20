@@ -103,6 +103,16 @@ footer {
     overflow: hidden;
 }
 
+.messenger-links a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #25d366; /* WhatsApp */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
 /* Стили для мобильных устройств */
 @media (max-width: 768px) {
     .nav-list {
