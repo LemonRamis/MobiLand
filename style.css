@@ -1,15 +1,25 @@
 /* Общие стили */
+:root {
+    --primary-color: #1F2937; /* Темно-серый для фона шапки и подвала */
+    --secondary-color: #FF7F00; /* Яркий оранжевый для акцентов */
+    --background-color: #F8F9FA; /* Светлый фон для страницы */
+    --text-color: #333333; /* Темный текст */
+    --header-color: #FF6A00; /* Оранжевый для заголовков */
+    --section-background: #E0E0E0; /* Светло-серый для разделов */
+    --button-bg-color: #007BFF; /* Голубой для кнопок */
+    --button-bg-hover: #0056b3; /* Темно-синий для кнопок при наведении */
+}
 body {
     font-family: 'Roboto', 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f9f9f9;
+    color: var(--text-color);
+    background-color: var(--background-color);
     line-height: 1.6;
 }
 
 header {
-    background-color: #000;
+    background-color: var(--primary-color);
     padding: 10px 0;
 }
 
@@ -24,8 +34,14 @@ header {
 
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-list {
@@ -52,7 +68,7 @@ h1, h2 {
 }
 
 button {
-    background-color: #ffa500;
+    background-color:var(--button-bg-color);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -63,7 +79,7 @@ button {
 }
 
 button:hover {
-    background-color: #ff7f00;
+    background-color:var(--button-bg-hover);
 }
 
 footer {
