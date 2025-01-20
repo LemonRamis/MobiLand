@@ -26,47 +26,64 @@ header {
     padding: 10px 0;
 }
 
-nav a {
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s, transform 0.3s ease-in-out;
-}
-
-nav a:hover {
-    color: var(--link-hover-color);
-    transform: scale(1.1);
-}
-
 /* Навигационное меню */
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Цвет фона */
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
+    position: sticky; /* Меню фиксируется при прокрутке */
+    top: 0;
+    z-index: 1000;
 }
 
+/* Стили для ссылок */
 .nav-link {
-    color: white;
+    color: white; /* Цвет текста */
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    margin: 0 8px;
-    transition: color 0.3s, transform 0.3s ease-in-out;
+    margin: 0 10px;
+    padding: 10px 15px;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease-in-out;
+    will-change: transform, color;
 }
 
 .nav-link:hover {
-    color: var(--link-hover-color);
-    transform: scale(1.1);
+    color: var(--link-hover-color); /* Цвет при наведении */
+    transform: scale(1.1); /* Увеличение при наведении */
 }
 
-.nav-link:active, .nav-link:focus {
+.nav-link:active,
+.nav-link:focus {
     color: var(--link-hover-color);
     outline: none;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid var(--link-hover-color); /* Подчеркивание активной ссылки */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Меню становится вертикальным */
+        padding: 15px 0;
+    }
+
+    .nav-link {
+        margin: 8px 0; /* Увеличиваем отступы между ссылками */
+    }
+}
+
+/* Переменные для цветов */
+:root {
+    --primary-color: #0073e6; /* Основной цвет навигации */
+    --link-hover-color: #ffcc00; /* Цвет при наведении */
 }
 
 /* Разделы */
