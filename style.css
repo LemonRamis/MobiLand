@@ -9,8 +9,9 @@
     --button-bg-color: #007BFF; /* Голубой для кнопок */
     --button-bg-hover: #0056b3; /* Темно-синий для кнопок при наведении */
     --link-hover-color: #ffcc00; /* Желтый для ссылок при наведении */
-    --service-item-bg: #f4f4f9; /* Светлый фон для услуг */
-    --service-item-hover-bg: #28a745; /* Зеленый для услуг при наведении */
+    --secondary-color: #f4f4f4; /* Цвет фона секции */
+    --service-item-bg: #ffffff; /* Цвет фона для элементов */
+    --service-item-hover-bg: #0073e6; /* Цвет фона при наведении */
 }
 
 /* Основной фон */
@@ -105,9 +106,10 @@ nav a:hover {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Анимация появления */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -143,10 +145,49 @@ nav a:hover {
     animation-delay: 1.2s;
 }
 
+/* Эффект при наведении */
 .service-item:hover {
     background-color: var(--service-item-hover-bg);
     color: white;
     transform: scale(1.05);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .services-list {
+        grid-template-columns: 1fr; /* Одна колонка на мобильных устройствах */
+    }
+
+    .services-section h1 {
+        font-size: 1.5rem; /* Уменьшаем размер заголовка для мобильных */
+    }
+
+    .service-item {
+        font-size: 14px; /* Уменьшаем размер шрифта для элементов */
+    }
+}
+
+/* Для больших экранов */
+@media (min-width: 1024px) {
+    .services-list {
+        grid-template-columns: repeat(3, 1fr); /* Три колонки на больших экранах */
+    }
+}
+
+/* Сглаживание анимации */
+.service-item {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Дополнительные улучшения по дизайну */
+.services-section h1 {
+    margin-bottom: 20px; /* Уменьшаем отступ для лучшего восприятия */
+}
+
+.service-item {
+    padding: 15px; /* Уменьшаем паддинг для лучшего вписывания в сетку */
+    border-radius: 10px; /* Сглаживаем углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Более выраженная тень для элементов */
 }
 
 /* Контактная кнопка */
