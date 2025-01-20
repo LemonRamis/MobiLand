@@ -93,9 +93,9 @@ header {
 
 /* Подсказка к гамбургер-меню */
 .menu-hint {
-    display: none;
+    display: block; /* Подсказка всегда видна по умолчанию */
     font-size: 14px;
-    color: #fff;
+    color: var(--text-color);
     text-align: center;
     margin-top: 5px;
     font-family: 'Roboto', sans-serif;
@@ -107,7 +107,10 @@ header {
         display: block;
     }
 }
-
+/* Подсказка скрывается, когда меню активно */
+.nav-list.active + .menu-hint {
+    display: none;
+}
 /* Анимация появления подсказки */
 @keyframes fadeIn {
     from {
