@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileMenu.addEventListener("click", () => {
         navList.classList.toggle("active");
         mobileMenu.classList.toggle("active");
+
         if (menuHint) {
+            // Скрывать подсказку, если меню открыто
             menuHint.style.display = navList.classList.contains("active") ? "none" : "block";
         }
     });
