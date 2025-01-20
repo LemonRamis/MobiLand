@@ -43,61 +43,80 @@ header {
 .nav-brand {
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
 }
 
-/* Гамбургер-кнопка */
-.hamburger {
+/* Гамбургер-меню */
+.menu-toggle {
     display: none;
     flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 25px;
-    background: none;
-    border: none;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    position: relative;
+    width: 35px;
+    height: 30px;
+    background-color: var(--primary-color, #333);
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.hamburger .line {
-    height: 3px;
-    width: 100%;
+.menu-toggle:hover {
+    background-color: #f0a500;
+    transform: scale(1.1);
+}
+
+/* Полоски гамбургер-меню */
+.bar {
     background-color: white;
+    height: 4px;
+    width: 25px;
+    margin: 3px 0;
     border-radius: 2px;
-    transition: transform 0.3s, opacity 0.3s;
+    transition: all 0.3s ease;
 }
 
-/* Скрытый список ссылок по умолчанию */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
+/* Состояние активного меню */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
-.nav-links li {
-    margin: 0;
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
 }
 
-.nav-link {
-    color: white;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Подсказка к гамбургер-меню */
+.menu-hint {
+    display: none;
     font-size: 14px;
-    font-weight: 600;
-    transition: color 0.3s ease, transform 0.3s ease-in-out;
+    color: #fff;
+    text-align: center;
+    margin-top: 5px;
+    font-family: 'Roboto', sans-serif;
+    animation: fadeIn 1s ease-in-out;
 }
 
-.nav-link:hover {
-    color: var(--link-hover-color);
-}
-
-/* Мобильная версия */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
+@media screen and (max-width: 768px) {
+    .menu-hint {
+        display: block;
     }
+}
+
+/* Анимация появления подсказки */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
     .nav-links {
         display: none; /* Скрываем ссылки */
