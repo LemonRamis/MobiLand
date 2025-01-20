@@ -3,19 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Обратная связь</title>
-    <!-- Метаописание для SEO -->
-    <meta name="description" content="Свяжитесь с нами для получения консультации или информации о наших услугах.">
-    <meta name="keywords" content="контакты, ремонт, услуги, телефон, сообщение">
-    <!-- Подключение шрифтов Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Подключение CSS -->
+    <title>Обратная связь - Mobiland</title>
+    <meta name="description" content="Свяжитесь с нами, заполнив форму обратной связи.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <!-- Список навигации -->
             <ul class="nav-list">
                 <li><a href="index.html" class="nav-link">Главная</a></li>
                 <li><a href="services.html" class="nav-link">Услуги</a></li>
@@ -26,61 +20,19 @@
         </nav>
     </header>
 
-    <!-- Раздел контактов -->
-    <section class="contact-section">
-        <h1>Свяжитесь с нами</h1>
-        <p>Заполните форму ниже, и мы свяжемся с вами в ближайшее время!</p>
-
-        <!-- Форма обратной связи -->
-        <form
-          action="https://formspree.io/f/xnnnkrar"
-          method="POST"
-          class="contact-form"
-        >
-            <label>
-                Ваш номер телефона:
-                <input 
-                  type="tel" 
-                  name="phone" 
-                  placeholder="+7 777 123 4567" 
-                  pattern="^\+7\s?\d{3}\s?\d{3}\s?\d{4}$" 
-                  title="Введите номер в формате: +7 777 123 4567" 
-                  required
-                >
-            </label>
-            
-            <label>
-                Ваше сообщение:
-                <textarea 
-                  name="message" 
-                  placeholder="Напишите ваше сообщение..." 
-                  required
-                ></textarea>
-            </label>
-            
+    <section class="feedback-section">
+        <h1>Обратная связь</h1>
+        <form action="#" class="contact-form">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" required></textarea>
             <button type="submit">Отправить</button>
         </form>
-
-        <!-- Благодарственное сообщение -->
-        <div class="thank-you-message" style="display: none;">
-            Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.
-        </div>
     </section>
 
     <footer>
         <p>© 2025, Mobiland. Все права защищены.</p>
     </footer>
-
-    <!-- Скрипт для отображения сообщения после отправки -->
-    <script>
-        const form = document.querySelector('.contact-form');
-        const thankYouMessage = document.querySelector('.thank-you-message');
-
-        form.addEventListener('submit', function (event) {
-            event.preventDefault(); // Остановить стандартное поведение формы
-            thankYouMessage.style.display = 'block'; // Показать благодарственное сообщение
-            form.style.display = 'none'; // Скрыть форму
-        });
-    </script>
 </body>
 </html>
