@@ -7,205 +7,66 @@
     <meta name="description" content="Качественный ремонт цифровой техники в Республике Казахстан: смарт-ТВ, ноутбуков, принтеров и многое другое. Свяжитесь с нами для подробностей!">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
     <style>
-        /* Стили, специфичные для главной страницы */
-
-        /* Раздел приветствия */
-        .welcome-section {
-            background-color: var(--section-background);
-            padding: 40px 20px;
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
-        }
-
-        .welcome-section h1 {
-            color: var(--header-color);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2rem;
-        }
-
-        .welcome-section p {
-            font-size: 1.1rem;
+        /* Стили для выделения отзывов */
+        .review-item {
+            background-color: #f4f4f4; /* Легкий серый фон */
+            padding: 15px;
             margin-bottom: 20px;
-            color: var(--text-color);
+            border-left: 5px solid #ff9e00; /* Оранжевая линия слева */
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .welcome-section ul {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
+        .review-item p {
+            font-style: italic;
+            color: #333;
         }
 
-        .welcome-section ul li {
-            font-size: 1.2rem;
-            color: var(--text-color);
+        .review-item .customer-name {
+            font-weight: bold;
+            color: #ff9e00; /* Цвет для имен */
         }
 
-        /* Раздел с преимуществами */
-        .advantages-section {
-            background-color: var(--section-background);
-            padding: 40px 20px;
+        .review-item .customer-location {
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* Стили для заголовков */
+        h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 20px;
             text-align: center;
-            margin-top: 30px;
+        }
+
+        /* Добавление акцентов в дизайне */
+        .welcome-section h1 {
+            color: #ff9e00; /* Оранжевый цвет для заголовка */
+            font-size: 2em; /* Уменьшенный размер шрифта */
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         .advantages-section h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.8rem;
-            color: var(--header-color);
+            color: #333;
+            font-size: 1.8em;
             margin-bottom: 20px;
-        }
-
-        .advantages-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .advantages-list li {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: var(--text-color);
-        }
-
-        /* Раздел с отзывами */
-        .reviews-section {
-            padding: 40px 20px;
-            margin-top: 30px;
-            background-color: var(--section-background);
             text-align: center;
         }
 
-        .reviews-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .review-item {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: left;
-            font-size: 1.1rem;
-            color: var(--text-color);
-        }
-
-        .customer-name {
-            font-weight: 700;
-            color: var(--header-color);
-        }
-
-        .customer-location {
-            font-size: 0.9rem;
-            color: var(--text-color);
-            margin-top: 10px;
-        }
-
-        /* Кнопка "Связаться с нами" */
-        .contact-btn-container {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .contact-btn {
-            background-color: var(--button-bg-color);
+        /* Кнопка контакта */
+        .contact-btn-container a {
+            background-color: #ff9e00; /* Оранжевый фон */
             color: white;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            border-radius: 50px;
+            padding: 12px 20px;
             text-decoration: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s, transform 0.3s ease;
-        }
-
-        .contact-btn:hover {
-            background-color: var(--button-bg-hover);
-            transform: scale(1.05);
-        }
-
-        /* Адаптивность для мобильных устройств */
-        @media (max-width: 768px) {
-            .welcome-section h1 {
-                font-size: 1.5rem; /* Уменьшаем размер заголовка */
-            }
-
-            .welcome-section p {
-                font-size: 1rem; /* Уменьшаем размер текста */
-            }
-
-            .welcome-section ul li {
-                font-size: 1rem; /* Уменьшаем размер списка */
-            }
-
-            .advantages-section h2 {
-                font-size: 1.5rem; /* Уменьшаем размер заголовка */
-            }
-
-            .advantages-list li {
-                font-size: 1rem; /* Уменьшаем размер текста */
-            }
-
-            .reviews-section h2 {
-                font-size: 1.5rem; /* Уменьшаем размер заголовка */
-            }
-
-            .review-item {
-                font-size: 1rem; /* Уменьшаем размер текста в отзывах */
-            }
-
-            .contact-btn {
-                font-size: 1rem; /* Уменьшаем размер кнопки */
-                padding: 12px 24px;
-            }
-
-            /* Контейнер для отзывов на мобильных устройствах */
-            .reviews-container {
-                flex-direction: column; /* Переводим в колонку */
-                gap: 15px;
-            }
-
-            .review-item {
-                padding: 15px; /* Уменьшаем padding */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .welcome-section h1 {
-                font-size: 1.2rem; /* Уменьшаем размер заголовка для маленьких экранов */
-            }
-
-            .welcome-section p {
-                font-size: 0.9rem; /* Уменьшаем размер текста */
-            }
-
-            .welcome-section ul li {
-                font-size: 0.9rem; /* Уменьшаем размер списка */
-            }
-
-            .advantages-section h2 {
-                font-size: 1.3rem; /* Уменьшаем размер заголовка */
-            }
-
-            .advantages-list li {
-                font-size: 0.9rem; /* Уменьшаем размер текста */
-            }
-
-            .reviews-section h2 {
-                font-size: 1.3rem; /* Уменьшаем размер заголовка */
-            }
-
-            .review-item {
-                font-size: 0.9rem; /* Уменьшаем размер текста в отзывах */
-            }
-
-            .contact-btn {
-                font-size: 0.9rem; /* Уменьшаем размер кнопки */
-                padding: 10px 20px;
-            }
+            border-radius: 5px;
+            font-weight: bold;
+            display: block;
+            text-align: center;
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -214,7 +75,7 @@
         <nav class="navbar">
             <a href="index.html" class="nav-link">Главная</a>
             <a href="services.html" class="nav-link">Услуги</a>
-            <a href="about.html" class="nav-link">О нас</a> <!-- Добавлена ссылка на "О нас" -->
+            <a href="about.html" class="nav-link">О нас</a> <!-- Ссылка на страницу "О нас" -->
             <a href="feedback.html" class="nav-link">Обратная связь</a>
             <a href="location.html" class="nav-link">Геолокация</a>
         </nav>
@@ -222,12 +83,14 @@
     
     <section class="welcome-section">
         <h1>Профессиональный ремонт с гарантией качества!</h1>
+        
         <ul>
             <li>Смарт-ТВ</li>
             <li>Ноутбуки</li>
             <li>Принтеры и ксерокс</li>
-            <li>Установка Windows и программного обеспечения</li>
+            <li>Установка Windows</li>
         </ul>
+        
     </section>
 
     <section class="advantages-section">
@@ -259,7 +122,7 @@
     </section>
 
     <div class="contact-btn-container">
-        <a href="feedback.html" class="contact-btn">Связаться с нами</a>
+        <a href="contact.html" class="contact-btn">Связаться с нами</a>
     </div>
 
     <footer>
