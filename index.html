@@ -73,13 +73,16 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="nav-brand">MobiLand</div>
-            <button class="hamburger" aria-label="Toggle menu">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-            <ul class="nav-links">
+            <!-- Гамбургер-меню -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <p class="menu-hint">Нажмите для открытия меню</p>
+    
+            <!-- Список навигации -->
+            <ul class="nav-list">
                 <li><a href="index.html" class="nav-link">Главная</a></li>
                 <li><a href="services.html" class="nav-link">Услуги</a></li>
                 <li><a href="about.html" class="nav-link">О нас</a></li>
@@ -87,8 +90,10 @@
                 <li><a href="location.html" class="nav-link">Геолокация</a></li>
             </ul>
         </nav>
-    </header> 
+    </header>
+
     <script src="script.js"></script>
+    
     <section class="welcome-section">
         <h1>Профессиональный ремонт с гарантией качества!</h1>
         
