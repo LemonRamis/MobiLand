@@ -121,88 +121,88 @@ header {
     }
 }
 
-    .nav-links {
-        display: none; /* Скрываем ссылки */
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: var(--primary-color);
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 15px 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.nav-links {
+    display: none; /* Скрываем ссылки */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .nav-links.active {
-        display: flex; /* Показываем ссылки при активации */
+.nav-links.active {
+    display: flex; /* Показываем ссылки при активации */
     }
 
-    .nav-link {
-        font-size: 16px;
-        padding: 10px 0;
+.nav-link {
+    font-size: 16px;
+    padding: 10px 0;
     }
 }
         /* Стили для выделения отзывов */
-        .review-item {
-            background-color: #f4f4f4; /* Легкий серый фон */
-            padding: 15px;
-            margin-bottom: 20px;
-            border-left: 5px solid #ff9e00; /* Оранжевая линия слева */
-            border-radius: 5px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.review-item {
+    background-color: #f4f4f4; /* Легкий серый фон */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-left: 5px solid #ff9e00; /* Оранжевая линия слева */
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .review-item p {
-            font-style: italic;
-            color: #333;
+.review-item p {
+    font-style: italic;
+    color: #333;
         }
 
-        .review-item .customer-name {
-            font-weight: bold;
-            color: #ff9e00; /* Цвет для имен */
+.review-item .customer-name {
+    font-weight: bold;
+    color: #ff9e00; /* Цвет для имен */
         }
 
-        .review-item .customer-location {
-            font-size: 0.9em;
-            color: #777;
+.review-item .customer-location {
+    font-size: 0.9em;
+    color: #777;
         }
 
         /* Стили для заголовков */
-        h2 {
-            color: #333;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            text-align: center;
+h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
         }
 
         /* Добавление акцентов в дизайне */
-        .welcome-section h1 {
-            color: #ff9e00; /* Оранжевый цвет для заголовка */
-            font-size: 2em; /* Уменьшенный размер шрифта */
-            text-align: center;
-            margin-bottom: 20px;
+.welcome-section h1 {
+    color: #ff9e00; /* Оранжевый цвет для заголовка */
+    font-size: 2em; /* Уменьшенный размер шрифта */
+    text-align: center;
+    margin-bottom: 20px;
         }
 
-        .advantages-section h2 {
-            color: #333;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            text-align: center;
+.advantages-section h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
         }
 
         /* Кнопка контакта */
-        .contact-btn-container a {
-            background-color: #ff9e00; /* Оранжевый фон */
-            color: white;
-            padding: 12px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            display: block;
-            text-align: center;
-            margin-top: 30px;
+.contact-btn-container a {
+    background-color: #ff9e00; /* Оранжевый фон */
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-top: 30px;
         }
 /* Разделы */
 .services-section {
@@ -291,11 +291,9 @@ header {
     .services-list {
         grid-template-columns: 1fr; /* Одна колонка на мобильных устройствах */
     }
-
     .services-section h1 {
         font-size: 1.5rem; /* Уменьшаем размер заголовка для мобильных */
     }
-
     .service-item {
         font-size: 14px; /* Уменьшаем размер шрифта для элементов */
     }
@@ -432,7 +430,6 @@ header {
         flex-direction: column;
         padding: 20px 0;
     }
-
     .nav-link {
         margin: 5px 0;
         font-size: 18px;
