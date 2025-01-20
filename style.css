@@ -9,7 +9,6 @@
     --button-bg-color: #007BFF; /* Голубой для кнопок */
     --button-bg-hover: #0056b3; /* Темно-синий для кнопок при наведении */
     --link-hover-color: #ffcc00; /* Желтый для ссылок при наведении */
-    --secondary-color: #f4f4f4; /* Цвет фона секции */
     --service-item-bg: #ffffff; /* Цвет фона для элементов */
     --service-item-hover-bg: #0073e6; /* Цвет фона при наведении */
 }
