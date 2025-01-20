@@ -1,304 +1,100 @@
-/* Основные цвета */
-:root {
-    --primary-color: #1F2937; /* Темно-серый для фона шапки и подвала */
-    --secondary-color: #FF7F00; /* Яркий оранжевый для акцентов */
-    --background-color: #F8F9FA; /* Светлый фон для страницы */
-    --text-color: #333333; /* Темный текст */
-    --header-color: #FF6A00; /* Оранжевый для заголовков */
-    --section-background: #E0E0E0; /* Светло-серый для разделов */
-    --button-bg-color: #007BFF; /* Голубой для кнопок */
-    --button-bg-hover: #0056b3; /* Темно-синий для кнопок при наведении */
-    --link-hover-color: #ffcc00; /* Желтый для ссылок при наведении */
-    --service-item-bg: #ffffff; /* Цвет фона для элементов */
-    --service-item-hover-bg: #0073e6; /* Цвет фона при наведении */
-}
-
-/* Основной фон */
+/* Общие стили */
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
 }
 
-/* Шапка */
 header {
-    background-color: var(--primary-color);
+    background-color: #000;
     padding: 10px 0;
 }
 
-/* Основной стиль навигационной панели */
+.header-title {
+    text-align: center;
+    font-size: 24px;
+    color: #ffa500;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+}
+
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-color: var(--primary-color);
-    padding: 10px 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
-/* Бренд */
-.nav-brand {
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.nav-links {
-    display: none; /* Скрываем ссылки */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: var(--primary-color);
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 15px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-.nav-links.active {
-    display: flex; /* Показываем ссылки при активации */
-    }
-
-.nav-link {
-    font-size: 16px;
-    padding: 10px 0;
-    }
-}
-
-/* Разделы */
-.services-section {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: var(--secondary-color);
-    margin: 20px auto;
-    border-radius: 8px;
-    max-width: 800px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.services-section h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 30px;
-    animation: fadeInUp 1s 0.5s forwards;
-}
-
-.services-list {
+.nav-list {
     list-style: none;
+    display: flex;
+    gap: 15px;
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
 }
 
-.service-item {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    color: #555;
-    background-color: var(--service-item-bg);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Анимация появления */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.service-item:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-.service-item:nth-child(2) {
-    animation-delay: 0.4s;
-}
-
-.service-item:nth-child(3) {
-    animation-delay: 0.6s;
-}
-
-.service-item:nth-child(4) {
-    animation-delay: 0.8s;
-}
-
-.service-item:nth-child(5) {
-    animation-delay: 1s;
-}
-
-.service-item:nth-child(6) {
-    animation-delay: 1.2s;
-}
-
-/* Эффект при наведении */
-.service-item:hover {
-    background-color: var(--service-item-hover-bg);
-    color: white;
-    transform: scale(1.05);
-}
-
-/* Адаптивность для мобильных устройств */
-@media (max-width: 768px) {
-    .services-list {
-        grid-template-columns: 1fr; /* Одна колонка на мобильных устройствах */
-    }
-    .services-section h1 {
-        font-size: 1.5rem; /* Уменьшаем размер заголовка для мобильных */
-    }
-    .service-item {
-        font-size: 14px; /* Уменьшаем размер шрифта для элементов */
-    }
-}
-
-/* Для больших экранов */
-@media (min-width: 1024px) {
-    .services-list {
-        grid-template-columns: repeat(3, 1fr); /* Три колонки на больших экранах */
-    }
-}
-
-/* Сглаживание анимации */
-.service-item {
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Дополнительные улучшения по дизайну */
-.services-section h1 {
-    margin-bottom: 20px; /* Уменьшаем отступ для лучшего восприятия */
-}
-
-.service-item {
-    padding: 15px; /* Уменьшаем паддинг для лучшего вписывания в сетку */
-    border-radius: 10px; /* Сглаживаем углы */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Более выраженная тень для элементов */
-}
-
-/* Контактная кнопка */
-.contact-btn-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-}
-
-.contact-btn {
-    background-color: var(--button-bg-color);
-    color: white;
-    padding: 15px 20px;
-    font-size: 16px;
-    border-radius: 50px;
+.nav-link {
     text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: #fff;
+    font-weight: 700;
+    transition: color 0.3s;
 }
 
-.contact-btn:hover {
-    background-color: var(--button-bg-hover);
-    transform: scale(1.1);
+.nav-link:hover {
+    color: #ffa500;
 }
 
-/* Контактная форма */
-.contact-section {
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
+h1, h2 {
+    color: #000;
 }
 
-.contact-section h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    color: var(--button-bg-color);
-    margin-bottom: 20px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form label {
-    font-size: 1rem;
-    text-align: left;
-}
-
-.contact-form input, 
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
-}
-
-.contact-form textarea {
-    resize: vertical;
-    height: 100px;
-}
-
-.contact-form button {
-    background-color: var(--button-bg-color);
-    color: white;
-    padding: 10px 20px;
-    font-size: 1rem;
+button {
+    background-color: #ffa500;
+    color: #fff;
     border: none;
+    padding: 10px 20px;
+    font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
-.contact-form button:hover {
-    background-color: var(--button-bg-hover);
+button:hover {
+    background-color: #ff7f00;
 }
 
-/* Геолокация */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #000;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Стили для секции "Как нас найти" */
 .location-section {
     padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
     text-align: center;
-}
-
-.location-section h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    color: var(--button-bg-color);
-    margin-bottom: 20px;
 }
 
 .map-container {
-    margin-top: 20px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 90%;
+    border-radius: 5px;
     overflow: hidden;
 }
 
-/* Медиазапрос для мобильных устройств */
+/* Стили для мобильных устройств */
 @media (max-width: 768px) {
-    .navbar {
+    .nav-list {
         flex-direction: column;
-        padding: 20px 0;
+        gap: 10px;
     }
-    .nav-link {
-        margin: 5px 0;
-        font-size: 18px;
+
+    .map-container {
+        height: 300px;
     }
 }
