@@ -80,12 +80,6 @@ header {
     }
 }
 
-/* Переменные для цветов */
-:root {
-    --primary-color: #0073e6; /* Основной цвет навигации */
-    --link-hover-color: #ffcc00; /* Цвет при наведении */
-}
-
 /* Разделы */
 .services-section {
     padding: 50px 20px;
