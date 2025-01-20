@@ -26,57 +26,100 @@ header {
     padding: 10px 0;
 }
 
-/* Навигационное меню */
+/* Основной стиль навигационной панели */
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: var(--primary-color); /* Цвет фона */
-    padding: 10px 0;
+    background-color: var(--primary-color);
+    padding: 10px 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap;
-    position: sticky; /* Меню фиксируется при прокрутке */
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-/* Стили для ссылок */
+/* Бренд */
+.nav-brand {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Гамбургер-кнопка */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Скрытый список ссылок по умолчанию */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
 .nav-link {
-    color: white; /* Цвет текста */
+    color: white;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    margin: 0 10px;
-    padding: 10px 15px;
     font-weight: 600;
     transition: color 0.3s ease, transform 0.3s ease-in-out;
-    will-change: transform, color;
 }
 
 .nav-link:hover {
-    color: var(--link-hover-color); /* Цвет при наведении */
-    transform: scale(1.1); /* Увеличение при наведении */
-}
-
-.nav-link:active,
-.nav-link:focus {
     color: var(--link-hover-color);
-    outline: none;
 }
 
-.nav-link.active {
-    border-bottom: 2px solid var(--link-hover-color); /* Подчеркивание активной ссылки */
-}
-
-/* Адаптивность */
+/* Мобильная версия */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Меню становится вертикальным */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none; /* Скрываем ссылки */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
         padding: 15px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex; /* Показываем ссылки при активации */
     }
 
     .nav-link {
-        margin: 8px 0; /* Увеличиваем отступы между ссылками */
+        font-size: 16px;
+        padding: 10px 0;
     }
 }
 
