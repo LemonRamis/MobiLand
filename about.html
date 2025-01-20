@@ -8,13 +8,36 @@
     <meta name="description" content="Узнайте больше о нашей компании и способах связи с нами.">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Стили для раздела "О нас" */
+        .contact-info li {
+            list-style: none;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        /* Кнопки для мессенджеров */
+        .messenger-links a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px;
+            background-color: #25d366; /* WhatsApp */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .messenger-links .telegram-btn {
+            background-color: #0088cc; /* Telegram */
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <a href="index.html" class="nav-link">Главная</a>
             <a href="services.html" class="nav-link">Услуги</a>
-            <a href="about.html" class="nav-link">О нас</a> <!-- Ссылка на страницу "О нас" -->
             <a href="feedback.html" class="nav-link">Обратная связь</a>
             <a href="location.html" class="nav-link">Геолокация</a>
         </nav>
@@ -22,7 +45,8 @@
     
     <!-- Раздел "О нас" -->
     <section class="about-section">
-        <h2>Контактные данные</h2>
+       
+        <h1>Контактные данные</h1>
         <ul class="contact-info">
             <li>📞 <strong>Телефон:</strong> +7 777 123 4567</li>
             <li>📧 <strong>Email:</strong> info@mobiland.kz</li>
@@ -34,14 +58,14 @@
             <a href="https://wa.me/77771234567" target="_blank" class="whatsapp-btn">
                 💬 Написать в WhatsApp
             </a>
-            
             <a href="https://t.me/mobiland_kz" target="_blank" class="telegram-btn">
                 🗨️ Написать в Telegram
             </a>
         </div>
 
         <h2>Часы работы</h2>
-        <p>Мы работаем с <strong>понедельника по пятницу</strong> с 9:00 до 18:00. В выходные по предварительной договоренности.</p>
+        <p>Мы работаем с <strong>понедельника по пятницу</strong> с 9:00 до 18:00.</p> 
+		<p>В выходные по предварительной договоренности.</p>
     </section>
 
     <footer>
