@@ -99,7 +99,7 @@ function submitQuickConsultation(event) {
 // Record contact intent, without collecting form text, models or phone numbers.
 document.addEventListener('click', event => {
   const link = event.target.closest('a');
-  if (!link || location.hostname !== 'lemonramis.github.io') return;
+  if (!link || !['mobileland.kz', 'www.mobileland.kz', 'lemonramis.github.io'].includes(location.hostname)) return;
   const channel = link.href.startsWith('tel:') ? 'phone' : link.href.startsWith('https://wa.me/') ? 'whatsapp' : null;
   if (!channel) return;
   if (typeof gtag === 'function') gtag('event', 'contact_click', { contact_channel: channel });
