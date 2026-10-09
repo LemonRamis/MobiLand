@@ -2,17 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lemonramis.github.io/MobiLand/</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://lemonramis.github.io/MobiLand/services.html</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://lemonramis.github.io/MobiLand/about.html</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2026-10-09</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://lemonramis.github.io/MobiLand/location.html</loc>
+    <lastmod>2026-10-09</lastmod>
     <priority>0.80</priority>
   </url>
 </urlset>

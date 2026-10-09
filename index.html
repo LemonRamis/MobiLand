@@ -1,94 +1,1100 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - Mobiland</title>
-    <meta name="description" content="Ремонт ноутбуков, смарт-ТВ и принтеров в Конаеве с гарантией качества. Установка Windows и антивирусов. Обратитесь к нам для консультации!">
-    <meta name="keywords" content="ремонт ноутбуков, ремонт смарт-ТВ, ремонт принтеров, установка Windows, установка антивирусов, Конаев, Mobiland">
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();
-       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сервис-Центр MOBILAND | Ремонт телевизоров, телефонов и компьютеров в Конаеве</title>
+  <meta name="description" content="Сервисный центр и телемастерская MOBILAND в г. Конаев (Капшагай). Профессиональный ремонт телевизоров (замена LED подсветки, плат), смартфонов, ноутбуков и электроники. Гарантия, честные цены. Тел: +7 (705) 330-44-36">
+  <meta name="keywords" content="ремонт телевизоров конаев, ремонт телевизоров капшагай, телемастер конаев, сервисный центр мобиленд конаев, замена подсветки телевизора, ремонт телефонов конаев, ремонт ноутбуков капшагай, mobiland конаев">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Сервис-Центр MOBILAND | Ремонт телевизоров и цифровой техники в Конаеве">
+  <meta property="og:description" content="Телемастерская и сервисный центр в г. Конаев (Капшагай), 3-й мкр, д. 14. Ремонт телевизоров, смартфонов, ПК. Звоните: +7 (705) 330-44-36">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lemonramis.github.io/MobiLand/">
 
-       ym(99598032, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true
-       });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/99598032" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X9DQZZ01GW"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-        
-      gtag('config', 'G-X9DQZZ01GW');
-    </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Mobiland",
-        "image": "https://lemonramis.github.io/MobiLand/",
-        "telephone": "+77053304436",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "3 микрорайон, 14 дом, 2 квартира",
-            "addressLocality": "Конаев",
-            "postalCode": "040000",
-            "addressCountry": "KZ"
-        },
-        "areaServed": "Конаев",
-      "serviceType": "Ремонт ноутбуков, смарт-ТВ, принтеров, установка Windows, установка антивирусов",
-      "url": "https://lemonramis.github.io/MobiLand/"
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            accent: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
     }
-    </script>
+  </script>
+  
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
 
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+     m[i].l=1*new Date();
+     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+     ym(99598032, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true
+     });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/99598032" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X9DQZZ01GW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+      
+    gtag('config', 'G-X9DQZZ01GW');
+  </script>
+  
+  <!-- Schema.org Microdata -->
+  <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Сервис-центр и телемастерская MOBILAND",
+      "image": "https://lemonramis.github.io/MobiLand/",
+      "telephone": "+77053304436",
+      "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "3 микрорайон, 14 дом, 2 квартира",
+          "addressLocality": "Конаев",
+          "postalCode": "040000",
+          "addressCountry": "KZ"
+      },
+      "areaServed": ["Конаев", "Капшагай"],
+      "serviceType": [
+          "Ремонт телевизоров",
+          "Телемастер",
+          "Замена подсветки телевизоров",
+          "Ремонт смартфонов и телефонов",
+          "Ремонт компьютеров и ноутбуков",
+          "Ремонт принтеров и оргтехники",
+          "Ремонт аудиоаппаратуры"
+      ],
+      "url": "https://lemonramis.github.io/MobiLand/"
+  }
+  </script>
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <ul class="nav-list">
-                <li><a href="index.html" class="nav-link">Главная</a></li>
-                <li><a href="services.html" class="nav-link">Услуги</a></li>
-                <li><a href="about.html" class="nav-link">Контакты</a></li>
-                <li><a href="location.html" class="nav-link">Геолокация</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
 
-    <section class="hero-section">
-        <h1>Профессиональный ремонт с гарантией качества!</h1>
-        <div class="messenger-links">   
-            <a href="services.html" class="btn" aria-label="Подробнее об услугах">
-                Подробнее об услугах
-            </a>
+  <!-- TOP BAR (INFO & WORKING HOURS) -->
+  <div class="bg-slate-900 text-slate-300 text-xs sm:text-sm py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
+        <span class="flex items-center gap-1.5 text-emerald-400 font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Открыто: Пн–Пт 10:00 – 19:00
+        </span>
+        <span class="hidden md:inline text-slate-600">|</span>
+        <span class="flex items-center gap-1 text-slate-300">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-500"></i>
+          г. Конаев (Капшагай), 3-й мкр, д. 14, кв. 2
+        </span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <a href="tel:+77053304436" class="hover:text-white transition flex items-center gap-1 font-semibold text-slate-200">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-500"></i>
+          +7 (705) 330-44-36
+        </a>
+        <a href="https://wa.me/77053304436?text=Здравствуйте!%20Пишу%20с%20сайта,%20нужна%20консультация%20по%20ремонту" target="_blank" class="hover:text-emerald-400 text-emerald-400 font-medium flex items-center gap-1 transition">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- LOGO -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-700 via-brand-600 to-blue-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+          <i data-lucide="wrench" class="w-6 h-6"></i>
         </div>
-    </section>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-2xl font-black tracking-tight text-slate-900">MOBILAND</span>
+            <span class="bg-brand-100 text-brand-700 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Сервис</span>
+          </div>
+          <p class="text-xs text-slate-500 font-medium">Телемастерская & Сервисный центр</p>
+        </div>
+      </a>
 
-    <section class="advantages-section">
-        <h2>Почему выбирают нас?</h2>
-        <ul>
-            <li>🔧 Качество и надежность — мы используем только оригинальные детали.</li>
-            <li>⚡ Быстрота обслуживания — мы ценим ваше время и работаем максимально эффективно.</li>
-            <li>🛡️ Гарантия на все работы — уверены в своих силах, предоставляем гарантию на выполненные работы.</li>
-            <li>💼 Опытные специалисты — наши мастера обладают многолетним опытом в ремонте цифровой техники.</li>
-        </ul>
-    </section>
-    
-    <footer>
-        <p>© 2025, Mobiland. Все права защищены.</p>
-    </footer>
+      <!-- DESKTOP NAV -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="#services" class="hover:text-brand-600 transition">Услуги</a>
+        <a href="#calculator" class="hover:text-brand-600 transition">Калькулятор поломки</a>
+        <a href="#advantages" class="hover:text-brand-600 transition">Почему мы</a>
+        <a href="#reviews" class="hover:text-brand-600 transition">Отзывы</a>
+        <a href="#contacts" class="hover:text-brand-600 transition">Контакты</a>
+      </nav>
+
+      <!-- CTA BUTTONS -->
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/77053304436?text=Здравствуйте!%20Хочу%20уточнить%20стоимость%20и%20сроки%20ремонта" target="_blank"
+           class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white text-sm font-semibold px-4 py-2.5 rounded-xl shadow-sm hover:shadow transition transform active:scale-95">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          <span>Написать мастеру</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800 text-white overflow-hidden py-16 sm:py-24">
+    <!-- Background glow & pattern -->
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand-600/30 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: Pitch & Trust -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-xs sm:text-sm text-slate-300">
+            <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+            <span>Надежный ремонт техники в Конаеве с 2010 года</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
+            Ремонт телевизоров и цифровой техники <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">без переплат и посредников</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Профессиональная телемастерская и сервисный центр <strong>MOBILAND</strong>. Ремонтируем телевизоры, смартфоны, ноутбуки и аудиотехнику прямо у нас в мастерской. Честная диагностика и надежная гарантия на работу.
+          </p>
+
+          <!-- Key Badges -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 max-w-lg mx-auto lg:mx-0">
+            <div class="bg-slate-800/60 border border-slate-700/60 p-3 rounded-xl">
+              <div class="text-amber-400 font-bold text-lg sm:text-xl">15+ лет</div>
+              <div class="text-xs text-slate-400">Опыта мастера</div>
+            </div>
+            <div class="bg-slate-800/60 border border-slate-700/60 p-3 rounded-xl">
+              <div class="text-emerald-400 font-bold text-lg sm:text-xl">От 30 мин</div>
+              <div class="text-xs text-slate-400">Быстрая диагностика</div>
+            </div>
+            <div class="bg-slate-800/60 border border-slate-700/60 p-3 rounded-xl col-span-2 sm:col-span-1">
+              <div class="text-blue-400 font-bold text-lg sm:text-xl">Гарантия</div>
+              <div class="text-xs text-slate-400">На все работы</div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <a href="https://wa.me/77053304436?text=Здравствуйте!%20У%20меня%20сломалась%20техника:%20" target="_blank"
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-bold px-7 py-4 rounded-xl text-base shadow-lg shadow-emerald-500/25 transition transform active:scale-95">
+              <i data-lucide="message-circle" class="w-5 h-5"></i>
+              <span>Описать проблему в WhatsApp</span>
+            </a>
+            
+            <a href="tel:+77053304436"
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white font-semibold px-6 py-4 rounded-xl text-base transition">
+              <i data-lucide="phone-call" class="w-5 h-5 text-brand-400"></i>
+              <span>+7 (705) 330-44-36</span>
+            </a>
+          </div>
+
+          <div class="text-xs text-slate-400 flex items-center justify-center lg:justify-start gap-2 pt-2">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+            <span>Бесплатная предварительная консультация мастера по телефону</span>
+          </div>
+        </div>
+
+        <!-- Right Column: Express Quick Diagnostic Card -->
+        <div class="lg:col-span-5">
+          <div class="bg-white text-slate-900 rounded-2xl p-6 sm:p-8 shadow-2xl border border-slate-100">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-5">
+              <div>
+                <h3 class="font-bold text-lg text-slate-900">Узнать стоимость ремонта</h3>
+                <p class="text-xs text-slate-500">Ответим в течение 10–15 минут</p>
+              </div>
+              <span class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center">
+                <i data-lucide="calculator" class="w-5 h-5"></i>
+              </span>
+            </div>
+
+            <form id="hero-quick-form" onsubmit="event.preventDefault(); submitQuickConsultation();" class="space-y-4 text-sm">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">Какая техника требует ремонта?</label>
+                <select id="quick-device-type" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-slate-800 bg-slate-50/50">
+                  <option value="Телевизор">📺 Телевизор (LG, Samsung, Sony, TCL и др.)</option>
+                  <option value="Смартфон">📱 Смартфон / Телефон (iPhone, Samsung, Xiaomi и др.)</option>
+                  <option value="Ноутбук / ПК">💻 Ноутбук / Компьютер</option>
+                  <option value="Аудио / Видео">🔊 Аудиотехника / Усилители / Колонки</option>
+                  <option value="Оргтехника / Принтер">🖨️ Принтер / Оргтехника</option>
+                  <option value="Другая техника">⚡ Блоки питания / Другая аппаратура</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">Что произошло / Симптом</label>
+                <input type="text" id="quick-issue-desc" placeholder="Напр.: Звук есть, а экран темный / Не включается" 
+                       class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-slate-800 placeholder-slate-400 bg-slate-50/50">
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">Ваш контактный телефон</label>
+                <input type="tel" id="quick-phone-input" placeholder="+7 (___) ___-__-__" 
+                       class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-slate-800 placeholder-slate-400 bg-slate-50/50">
+              </div>
+
+              <button type="submit" 
+                      class="w-full py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-md shadow-brand-600/30 transition transform active:scale-95 flex items-center justify-center gap-2">
+                <span>Рассчитать стоимость и наличие деталей</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+
+              <p class="text-[11px] text-center text-slate-400">
+                Или напишите напрямую: 
+                <a href="https://wa.me/77053304436" target="_blank" class="text-emerald-600 font-semibold underline hover:text-emerald-700">Открыть WhatsApp</a>
+              </p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY SERVICES SECTION -->
+  <section id="services" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 text-xs font-bold uppercase tracking-wider bg-brand-50 px-3 py-1 rounded-full border border-brand-100">Услуги мастерской</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-4">Что мы ремонтируем в Конаеве</h2>
+        <p class="text-slate-600 text-base">
+          Ремонтируем на компонентном уровне (пайка и замена конкретных радиодеталей, а не дорогостоящая замена модулей целиком). Это экономит до 60% стоимости нового устройства.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- SERVICE 1: Ремонт телевизоров (ФЛАГМАН) -->
+        <div class="bg-gradient-to-b from-blue-50/50 to-white rounded-2xl border-2 border-brand-200 p-7 shadow-sm hover:shadow-xl transition-all relative flex flex-col justify-between">
+          <div class="absolute -top-3.5 right-6 bg-brand-600 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+            Основное направление
+          </div>
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center mb-6 shadow-md shadow-brand-500/20">
+              <i data-lucide="tv" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Ремонт телевизоров (Телемастер)</h3>
+            <p class="text-slate-600 text-sm mb-4">
+              Ремонт LED, LCD, Smart TV любых диагоналей и производителей: Samsung, LG, Sony, TCL, Philips, Xiaomi, Haier, DEXP.
+            </p>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 mb-6">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span><strong>Замена LED подсветки</strong> (звук есть, а экран темный)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Ремонт блоков питания и материнских плат (Main Board)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Восстановление прошивки / замена микросхем памяти</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Ремонт разъемов HDMI, тюнеров и плат T-Con</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-500 font-medium">Бесплатная консультация</span>
+            <a href="https://wa.me/77053304436?text=Здравствуйте!%20Нужен%20ремонт%20телевизора" target="_blank"
+               class="text-brand-600 hover:text-brand-800 font-bold text-sm inline-flex items-center gap-1">
+              Уточнить цену <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- SERVICE 2: Ремонт смартфонов и планшетов -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-amber-500 text-white flex items-center justify-center mb-6 shadow-md shadow-amber-500/20">
+              <i data-lucide="smartphone" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Ремонт телефонов и планшетов</h3>
+            <p class="text-slate-600 text-sm mb-4">
+              Ремонт iPhone, Samsung Galaxy, Xiaomi, Redmi, Poco, Realme, Huawei, Honor и других брендов.
+            </p>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 mb-6">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Замена дисплеев, тачскринов и стекол</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Замена аккумуляторов (АКБ)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Замена разъемов питания (Type-C, Lightning, Micro-USB)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Чистка и восстановление после воды</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-500 font-medium">Срочный ремонт от 40 мин</span>
+            <a href="https://wa.me/77053304436?text=Здравствуйте!%20Нужен%20ремонт%20телефона" target="_blank"
+               class="text-brand-600 hover:text-brand-800 font-bold text-sm inline-flex items-center gap-1">
+              Уточнить цену <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- SERVICE 3: Компьютеры и ноутбуки -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-indigo-600 text-white flex items-center justify-center mb-6 shadow-md shadow-indigo-600/20">
+              <i data-lucide="laptop" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Ноутбуки, ПК и Моноблоки</h3>
+            <p class="text-slate-600 text-sm mb-4">
+              Аппаратный и программный ремонт: Asus, Acer, Lenovo, HP, Dell, Apple MacBook.
+            </p>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 mb-6">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Чистка от пыли и замена термопасты (устранение перегрева)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Замена матриц (экранов), клавиатур, петель корпуса</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Апгрейд: скоростные SSD диски, оперативная память</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Установка Windows 11/10, драйверов и программ</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-500 font-medium">Ускорение работы ПК</span>
+            <a href="https://wa.me/77053304436?text=Здравствуйте!%20Нужен%20ремонт%20ноутбука%20или%20компьютера" target="_blank"
+               class="text-brand-600 hover:text-brand-800 font-bold text-sm inline-flex items-center gap-1">
+              Уточнить цену <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- SERVICE 4: Аудио- и видеотехника -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-purple-600 text-white flex items-center justify-center mb-6 shadow-md shadow-purple-600/20">
+              <i data-lucide="speaker" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Аудиотехника и Усилители</h3>
+            <p class="text-slate-600 text-sm mb-4">
+              Ремонт колонок, музыкальных центров, усилителей звука, сабвуферов, ресиверов.
+            </p>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 mb-6">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Устранение фона, треска, хрипов в звуке</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Ремонт выходных каскадов и микросхем УНЧ</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Замена разъемов питания, AUX, Jack, Bluetooth плат</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-500 font-medium">Качественный звук</span>
+            <a href="https://wa.me/77053304436?text=Здравствуйте!%20Нужен%20ремонт%20аудиотехники" target="_blank"
+               class="text-brand-600 hover:text-brand-800 font-bold text-sm inline-flex items-center gap-1">
+              Уточнить цену <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- SERVICE 5: Оргтехника и принтеры -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-cyan-600 text-white flex items-center justify-center mb-6 shadow-md shadow-cyan-600/20">
+              <i data-lucide="printer" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Принтеры и Оргтехника</h3>
+            <p class="text-slate-600 text-sm mb-4">
+              Обслуживание лазерных и струйных принтеров, МФУ (Canon, HP, Epson, Pantum).
+            </p>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 mb-6">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Устранение замятия бумаги, замена роликов захвата</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Ремонт печек (термоузлов), замена термопленки</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Заправка и обслуживание картриджей</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-500 font-medium">Для дома и офиса</span>
+            <a href="https://wa.me/77053304436?text=Здравствуйте!%20Нужен%20ремонт%20принтера/оргтехники" target="_blank"
+               class="text-brand-600 hover:text-brand-800 font-bold text-sm inline-flex items-center gap-1">
+              Уточнить цену <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- SERVICE 6: Блоки питания и спецэлектроника -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-emerald-600 text-white flex items-center justify-center mb-6 shadow-md shadow-emerald-600/20">
+              <i data-lucide="cpu" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Блоки питания & Электроника</h3>
+            <p class="text-slate-600 text-sm mb-4">
+              Ремонт импульсных блоков питания, зарядных устройств, плат управления бытовой техники.
+            </p>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 mb-6">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Ремонт нестандартных зарядных устройств и адаптеров</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Пайка плат управления бытовой техники</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Продажа адаптеров, кабелей, шнуров</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-500 font-medium">Пайка любой сложности</span>
+            <a href="https://wa.me/77053304436?text=Здравствуйте!%20Нужен%20ремонт%20электроники/блока%20питания" target="_blank"
+               class="text-brand-600 hover:text-brand-800 font-bold text-sm inline-flex items-center gap-1">
+              Уточнить цену <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE REPAIR CALCULATOR -->
+  <section id="calculator" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-amber-400 text-xs font-bold uppercase tracking-wider bg-slate-800 px-3 py-1 rounded-full border border-slate-700">Интерактивный расчет</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 mb-3">Оцените поломку онлайн</h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          Выберите устройство и характер проблемы, чтобы узнать примерные сроки и порядок стоимости.
+        </p>
+      </div>
+
+      <div class="bg-slate-800/90 border border-slate-700 rounded-3xl p-6 sm:p-10 shadow-2xl">
+        <!-- Step 1: Select Device -->
+        <div class="mb-8">
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">1. Выберите устройство:</label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="calc-device-selector">
+            <button type="button" onclick="selectCalcDevice('tv', this)" class="calc-dev-btn bg-brand-600 border border-brand-500 text-white p-4 rounded-xl flex flex-col items-center gap-2 text-center transition">
+              <i data-lucide="tv" class="w-6 h-6"></i>
+              <span class="font-bold text-sm">Телевизор</span>
+            </button>
+            <button type="button" onclick="selectCalcDevice('phone', this)" class="calc-dev-btn bg-slate-700/60 border border-slate-600 text-slate-300 hover:bg-slate-700 p-4 rounded-xl flex flex-col items-center gap-2 text-center transition">
+              <i data-lucide="smartphone" class="w-6 h-6"></i>
+              <span class="font-bold text-sm">Смартфон</span>
+            </button>
+            <button type="button" onclick="selectCalcDevice('laptop', this)" class="calc-dev-btn bg-slate-700/60 border border-slate-600 text-slate-300 hover:bg-slate-700 p-4 rounded-xl flex flex-col items-center gap-2 text-center transition">
+              <i data-lucide="laptop" class="w-6 h-6"></i>
+              <span class="font-bold text-sm">Ноутбук/ПК</span>
+            </button>
+            <button type="button" onclick="selectCalcDevice('other', this)" class="calc-dev-btn bg-slate-700/60 border border-slate-600 text-slate-300 hover:bg-slate-700 p-4 rounded-xl flex flex-col items-center gap-2 text-center transition">
+              <i data-lucide="cpu" class="w-6 h-6"></i>
+              <span class="font-bold text-sm">Другое</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: Select Symptom -->
+        <div class="mb-8">
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">2. Что произошло с устройством?</label>
+          <div id="calc-symptoms-list" class="grid sm:grid-cols-2 gap-3">
+            <!-- Dynamic symptoms injected via JS -->
+          </div>
+        </div>
+
+        <!-- Calculation Result Box -->
+        <div id="calc-result-box" class="bg-slate-900/80 border border-slate-700 p-6 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-1 text-center md:text-left">
+            <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Ориентировочная причина и стоимость:</div>
+            <div id="calc-result-title" class="text-lg sm:text-xl font-bold text-white">Замена LED подсветки телевизора</div>
+            <div id="calc-result-details" class="text-sm text-slate-300">Типовой симптом: звук есть, если посветить фонариком — виден силуэт.</div>
+            <div class="flex items-center justify-center md:justify-start gap-4 pt-2">
+              <span id="calc-result-price" class="text-amber-400 font-extrabold text-xl">от 12 000 ₸</span>
+              <span class="text-slate-500">•</span>
+              <span id="calc-result-time" class="text-emerald-400 text-sm font-medium">Срок: 1–2 рабочих дня</span>
+            </div>
+          </div>
+
+          <a id="calc-whatsapp-btn" href="#" target="_blank"
+             class="w-full md:w-auto shrink-0 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-6 py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 transition transform active:scale-95">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+            <span>Уточнить для моей модели</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ADVANTAGES / WHY MOBILAND -->
+  <section id="advantages" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 text-xs font-bold uppercase tracking-wider bg-brand-50 px-3 py-1 rounded-full border border-brand-100">Преимущества</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-4">Почему жители Конаева выбирают MOBILAND</h2>
+        <p class="text-slate-600 text-base">
+          В небольшом городе репутация мастера — главное. Мы не однодневки с красивой рекламой, а постоянная местная мастерская.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs hover:border-brand-500 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-blue-50 text-brand-600 flex items-center justify-center mb-4">
+            <i data-lucide="user-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Опытный телемастер</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Ремонт выполняет мастер с многолетним стажем работы со сложной телевизионной и цифровой схемотехникой.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs hover:border-brand-500 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4">
+            <i data-lucide="badge-dollar-sign" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Честная цена без развода</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Согласовываем точную стоимость до начала ремонта. Если ремонт не имеет смысла — честно предупредим.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs hover:border-brand-500 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4">
+            <i data-lucide="shield" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Гарантия на работу</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Предоставляем гарантию на выполненные работы и установленные детали. Вы всегда знаете, куда обратиться.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs hover:border-brand-500 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-4">
+            <i data-lucide="microchip" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Компонентная пайка</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Паяльные станции, микроскопы и программаторы позволяют нам менять сгоревшие чипы без покупки дорогих плат целиком.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REVIEWS & REPUTATION SECTION -->
+  <section id="reviews" class="py-20 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="text-brand-600 text-xs font-bold uppercase tracking-wider bg-brand-50 px-3 py-1 rounded-full border border-brand-100">Отзывы клиентов</span>
+          <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Что говорят о нашей работе</h2>
+          <p class="text-slate-600 text-sm mt-1">Реальные отзывы наших клиентов в Конаеве</p>
+        </div>
+        
+        <a href="https://search.google.com/local/writereview?placeid=ChIJ-3-sample" target="_blank"
+           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-sm font-semibold transition">
+          <i data-lucide="star" class="w-4 h-4 text-amber-500 fill-amber-500"></i>
+          <span>Оставить отзыв в Google</span>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/70 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center gap-1 text-amber-400">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              «Телевизор LG внезапно перестал показывать картинку, только звук шел. Мастер быстро определил, что сгорела LED-подсветка. Поменяли оперативно, телевизор светит как новый! Спасибо за профессионализм!»
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 mt-4 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-brand-200 text-brand-800 font-bold flex items-center justify-center text-sm">К</div>
+            <div>
+              <div class="font-semibold text-slate-900 text-sm">Кайрат С.</div>
+              <div class="text-xs text-slate-500">г. Конаев • Ремонт ТВ LG 43"</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/70 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center gap-1 text-amber-400">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              «Приносил ноутбук Asus, сильно гудел вентилятор и отключался через 10 минут. Почистили, заменили термопасту и порекомендовали поставить SSD — ноутбук теперь летает! Цены адекватные.»
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 mt-4 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-emerald-200 text-emerald-800 font-bold flex items-center justify-center text-sm">А</div>
+            <div>
+              <div class="font-semibold text-slate-900 text-sm">Артур М.</div>
+              <div class="text-xs text-slate-500">г. Конаев • Чистка и апгрейд ноутбука</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/70 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center gap-1 text-amber-400">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed">
+              «Заменили гнездо зарядки на смартфоне Samsung, заряжался только если прижимать провод. Сделали аккуратно и быстро. Обращаюсь не первый раз, всегда выручают.»
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 mt-4 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-purple-200 text-purple-800 font-bold flex items-center justify-center text-sm">Е</div>
+            <div>
+              <div class="font-semibold text-slate-900 text-sm">Елена В.</div>
+              <div class="text-xs text-slate-500">г. Конаев • Ремонт смартфона Samsung</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACTS & LOCATION SECTION -->
+  <section id="contacts" class="py-20 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Contact details -->
+        <div class="lg:col-span-5 space-y-6">
+          <div>
+            <span class="text-brand-600 text-xs font-bold uppercase tracking-wider bg-brand-50 px-3 py-1 rounded-full border border-brand-100">Ждем вас</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 mt-3 mb-2">Контакты мастерской</h2>
+            <p class="text-slate-600 text-sm">Привозите технику на диагностику или предварительно позвоните мастеру.</p>
+          </div>
+
+          <div class="space-y-4">
+            
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900 text-base">Точный адрес:</div>
+                <div class="text-slate-600 text-sm mt-0.5">Казахстан, Алматинская область, г. Конаев (Капшагай), 3-й микрорайон, дом 14, кв. 2</div>
+                <div class="mt-2 flex items-center gap-3">
+                  <a href="https://2gis.kz/konaev/search/3-%D0%B9%20%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%2C%2014" target="_blank" class="text-xs text-brand-600 font-bold hover:underline">Открыть в 2ГИС →</a>
+                  <a href="https://yandex.kz/maps/?text=%D0%9A%D0%BE%D0%BD%D0%B0%D0%B5%D0%B2+3-%D0%B9+%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D1%80%D0%B0%D0%B9%D0%BE%D0%BD+14" target="_blank" class="text-xs text-amber-600 font-bold hover:underline">Яндекс Карты →</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900 text-base">Телефоны для связи:</div>
+                <div class="space-y-1 mt-1 text-sm font-semibold">
+                  <div>
+                    <a href="tel:+77053304436" class="text-slate-900 hover:text-brand-600 transition">+7 (705) 330-44-36</a>
+                    <span class="text-xs text-slate-500 font-normal ml-2">(Основной, звонки и WhatsApp)</span>
+                  </div>
+                  <div>
+                    <a href="tel:+77019972264" class="text-slate-900 hover:text-brand-600 transition">+7 (701) 997-22-64</a>
+                    <span class="text-xs text-slate-500 font-normal ml-2">(Дополнительный)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900 text-base">График работы:</div>
+                <div class="text-slate-700 text-sm mt-1">
+                  <div><strong>Понедельник — Пятница:</strong> 10:00 – 19:00</div>
+                  <div class="text-xs text-slate-500">(Обед: 14:00 – 15:00)</div>
+                  <div class="mt-1"><strong>Суббота:</strong> По предварительной договоренности</div>
+                  <div><strong>Воскресенье:</strong> Выходной</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pt-2">
+            <a href="https://wa.me/77053304436?text=Здравствуйте!%20Хочу%20уточнить%20маршрут%20и%20как%20подъехать" target="_blank"
+               class="w-full inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition">
+              <i data-lucide="navigation" class="w-5 h-5"></i>
+              <span>Спросить маршрут в WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Map / Visual Representation Card -->
+        <div class="lg:col-span-7 bg-white rounded-3xl border border-slate-200 p-6 shadow-sm overflow-hidden">
+          <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-4">
+            <div>
+              <h3 class="font-bold text-slate-900">Расположение на карте Конаева</h3>
+              <p class="text-xs text-slate-500">Удобный подъезд и парковка возле дома</p>
+            </div>
+            <span class="text-xs font-semibold px-2.5 py-1 bg-slate-100 rounded-lg text-slate-700">3-й микрорайон</span>
+          </div>
+
+          <!-- Interactive embedded map view via OpenStreetMap / Iframe -->
+          <div class="relative w-full h-[380px] rounded-2xl overflow-hidden border border-slate-200 bg-slate-100">
+            <iframe 
+              src="https://www.openstreetmap.org/export/embed.html?bbox=77.0600%2C43.8700%2C77.0900%2C43.8900&amp;layer=mapnik&amp;marker=43.8814%2C77.0755" 
+              class="w-full h-full border-0" 
+              title="Карта расположения Mobiland в Конаеве">
+            </iframe>
+            
+            <!-- Overlay Map Card -->
+            <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-slate-200/80 shadow-lg flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center font-bold text-xs">M</div>
+                <div>
+                  <div class="text-xs font-bold text-slate-900">СЦ "MOBILAND"</div>
+                  <div class="text-[11px] text-slate-500">3-й мкр, дом 14, кв 2</div>
+                </div>
+              </div>
+              <a href="https://2gis.kz/konaev" target="_blank" class="text-xs bg-brand-600 text-white font-semibold px-3 py-1.5 rounded-lg hover:bg-brand-700 transition">
+                2ГИС Маршрут
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800/80">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-brand-600 flex items-center justify-center text-white font-bold">M</div>
+          <div>
+            <div class="text-base font-bold text-white tracking-tight">СЕРВИС-ЦЕНТР "MOBILAND"</div>
+            <div class="text-xs text-slate-500">Телемастерская и ремонт цифровой техники в Конаеве</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6 text-xs text-slate-400">
+          <a href="#services" class="hover:text-white transition">Услуги</a>
+          <a href="#calculator" class="hover:text-white transition">Калькулятор</a>
+          <a href="#advantages" class="hover:text-white transition">О нас</a>
+          <a href="#contacts" class="hover:text-white transition">Контакты</a>
+        </div>
+
+        <div class="text-xs text-slate-500">
+          © 2026 MOBILAND. Все права защищены.
+        </div>
+      </div>
+
+      <div class="pt-6 text-center text-xs text-slate-600">
+        г. Конаев (Капшагай), Алматинская область • Телефон: +7 (705) 330-44-36
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK WHATSAPP BUTTON (MOBILE ONLY) -->
+  <aside aria-label="Связь с мастером" class="fixed bottom-5 right-5 z-50 md:hidden">
+    <a href="https://wa.me/77053304436?text=Здравствуйте!%20Хочу%20проконсультироваться%20по%20ремонту%20техники" target="_blank"
+       class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-105 active:scale-95 transition-transform">
+      <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+  </aside>
+
+  <!-- JAVASCRIPT FOR CALCULATOR AND DYNAMICS -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Data for interactive calculator
+    const calculatorData = {
+      tv: {
+        name: 'Телевизор',
+        symptoms: [
+          {
+            title: 'Звук есть, экран темный (нет картинки)',
+            desc: 'Сгорела LED подсветка (самая частая типовая поломка)',
+            price: 'от 12 000 ₸',
+            time: '1–2 рабочих дня'
+          },
+          {
+            title: 'Не включается, индикатор мигает или не горит',
+            desc: 'Выход из строя блока питания или материнской платы',
+            price: 'от 8 000 ₸',
+            time: '1–3 дня'
+          },
+          {
+            title: 'Полосы по экрану / артефакты',
+            desc: 'Неисправность платы T-Con или шлейфов матрицы',
+            price: 'от 9 000 ₸',
+            time: '2–3 дня'
+          },
+          {
+            title: 'Зависает на заставке Smart TV / циклическая перезагрузка',
+            desc: 'Сбой прошивки памяти eMMC / NAND',
+            price: 'от 10 000 ₸',
+            time: '1–2 дня'
+          }
+        ]
+      },
+      phone: {
+        name: 'Смартфон',
+        symptoms: [
+          {
+            title: 'Разбит экран / нет отклика на касания',
+            desc: 'Замена дисплейного модуля в сборе',
+            price: 'от 7 000 ₸',
+            time: 'от 1 часа (при наличии детали)'
+          },
+          {
+            title: 'Быстро садится / выключается на морозе',
+            desc: 'Замена аккумулятора (АКБ)',
+            price: 'от 5 000 ₸',
+            time: '40–60 минут'
+          },
+          {
+            title: 'Не заряжается / отходит шнур',
+            desc: 'Замена разъема питания (Type-C / Lightning)',
+            price: 'от 4 000 ₸',
+            time: '1–2 часа'
+          },
+          {
+            title: 'Упал в воду / залит жидкостью',
+            desc: 'Ультразвуковая чистка платы и восстановление контактов',
+            price: 'от 6 000 ₸',
+            time: '1 день'
+          }
+        ]
+      },
+      laptop: {
+        name: 'Ноутбук / ПК',
+        symptoms: [
+          {
+            title: 'Греется, шумит кулер, тормозит',
+            desc: 'Полная чистка от пыли + замена термопасты на качественную',
+            price: 'от 5 000 ₸',
+            time: '2–3 часа'
+          },
+          {
+            title: 'Включается, но нет изображения на экране',
+            desc: 'Неисправность цепей питания, видеочипа или оперативной памяти',
+            price: 'от 8 000 ₸',
+            time: '1–3 дня'
+          },
+          {
+            title: 'Очень медленно загружается Windows',
+            desc: 'Установка скоростного SSD + перенос системы',
+            price: 'от 7 000 ₸ + стоимость SSD',
+            time: '2–4 часа'
+          },
+          {
+            title: 'Сломаны петли корпуса / разбит экран',
+            desc: 'Ремонт петель корпуса или замена матрицы',
+            price: 'от 6 000 ₸',
+            time: '1–2 дня'
+          }
+        ]
+      },
+      other: {
+        name: 'Другая электроника',
+        symptoms: [
+          {
+            title: 'Колонка / усилитель хрипит или не включается',
+            desc: 'Ремонт усилителя мощности звука или цепей питания',
+            price: 'от 5 000 ₸',
+            time: '1–3 дня'
+          },
+          {
+            title: 'Принтер не берет бумагу / пачкает листы',
+            desc: 'Замена роликов захвата или термопленки',
+            price: 'от 4 500 ₸',
+            time: '1–2 дня'
+          },
+          {
+            title: 'Сгорел блок питания / зарядное устройство',
+            desc: 'Компонентный ремонт первичной/вторичной цепи',
+            price: 'от 3 500 ₸',
+            time: '1 день'
+          }
+        ]
+      }
+    };
+
+    let currentDevice = 'tv';
+    let currentSymptomIndex = 0;
+
+    function renderSymptoms() {
+      const dev = calculatorData[currentDevice];
+      const listContainer = document.getElementById('calc-symptoms-list');
+      listContainer.innerHTML = '';
+
+      dev.symptoms.forEach((symp, idx) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `text-left p-3.5 rounded-xl border transition ${
+          idx === currentSymptomIndex 
+            ? 'bg-brand-900/60 border-brand-500 text-white shadow' 
+            : 'bg-slate-800/60 border-slate-700 text-slate-300 hover:bg-slate-700/60'
+        }`;
+        btn.onclick = () => selectSymptom(idx);
+        btn.innerHTML = `
+          <div class="font-semibold text-sm flex items-center justify-between">
+            <span>${symp.title}</span>
+            ${idx === currentSymptomIndex ? '<span class="text-brand-400 font-bold text-xs">✓</span>' : ''}
+          </div>
+          <div class="text-xs text-slate-400 mt-1">${symp.desc}</div>
+        `;
+        listContainer.appendChild(btn);
+      });
+
+      updateResultBox();
+    }
+
+    function selectCalcDevice(deviceKey, btnElement) {
+      currentDevice = deviceKey;
+      currentSymptomIndex = 0;
+
+      const buttons = document.querySelectorAll('.calc-dev-btn');
+      buttons.forEach(b => {
+        b.classList.remove('bg-brand-600', 'border-brand-500', 'text-white');
+        b.classList.add('bg-slate-700/60', 'border-slate-600', 'text-slate-300');
+      });
+
+      if (btnElement) {
+        btnElement.classList.remove('bg-slate-700/60', 'border-slate-600', 'text-slate-300');
+        btnElement.classList.add('bg-brand-600', 'border-brand-500', 'text-white');
+      }
+
+      renderSymptoms();
+    }
+
+    function selectSymptom(index) {
+      currentSymptomIndex = index;
+      renderSymptoms();
+    }
+
+    function updateResultBox() {
+      const dev = calculatorData[currentDevice];
+      const symptom = dev.symptoms[currentSymptomIndex];
+
+      document.getElementById('calc-result-title').textContent = `${dev.name}: ${symptom.title}`;
+      document.getElementById('calc-result-details').textContent = symptom.desc;
+      document.getElementById('calc-result-price').textContent = symptom.price;
+      document.getElementById('calc-result-time').textContent = symptom.time;
+
+      const waText = encodeURIComponent(`Здравствуйте! Хочу уточнить ремонт (${dev.name}). Поломка: "${symptom.title}". Подскажите точную стоимость и когда можно привезти?`);
+      document.getElementById('calc-whatsapp-btn').href = `https://wa.me/77053304436?text=${waText}`;
+    }
+
+    function submitQuickConsultation() {
+      const device = document.getElementById('quick-device-type').value;
+      const issue = document.getElementById('quick-issue-desc').value || 'Нужна консультация';
+      const phone = document.getElementById('quick-phone-input').value;
+
+      const message = `Здравствуйте! Заявка с сайта Mobiland:\n- Техника: ${device}\n- Проблема: ${issue}${phone ? `\n- Телефон: ${phone}` : ''}`;
+      window.open(`https://wa.me/77053304436?text=${encodeURIComponent(message)}`, '_blank');
+    }
+
+    // Initialize first render
+    renderSymptoms();
+  </script>
 </body>
 </html>
