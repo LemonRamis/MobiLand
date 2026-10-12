@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MOBILAND — ремонт телевизоров и техники в Конаеве</title>
   <meta name="description" content="Ремонт телевизоров, телефонов, ноутбуков и компьютеров в Конаеве (Капшагае). Диагностика, согласование стоимости до ремонта, гарантия. +7 (705) 330-44-36.">
-  <meta name="keywords" content="ремонт телевизоров конаев, ремонт телевизоров капшагай, телемастер конаев, сервисный центр мобиленд конаев, замена подсветки телевизора конаев, ремонт телефонов конаев, ремонт ноутбуков капшагай, mobiland конаев">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="Сервис-Центр MOBILAND | Ремонт телевизоров и цифровой техники в Конаеве">
-  <meta property="og:description" content="Телемастерская и сервисный центр в г. Конаев (Капшагай), 3-й мкр, д. 14. Ремонт телевизоров, смартфонов, ПК. Звоните: +7 (705) 330-44-36">
+  <meta property="og:title" content="MOBILAND — ремонт телевизоров и техники в Конаеве">
+  <meta property="og:description" content="Сломалась техника? Позвоните или напишите в мастерскую. Стоимость и срок согласуем до ремонта. Конаев, 3-й микрорайон, дом 14. +7 (705) 330-44-36.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mobileland.kz/">
 
   <link rel="canonical" href="https://mobileland.kz/">
+  <link rel="describedby" href="llms.txt" type="text/plain">
   <meta name="theme-color" content="#101c31">
   <meta property="og:locale" content="ru_RU">
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" type="image/x-icon">
@@ -52,120 +52,160 @@
     }
   </script>
   
-  <!-- Schema.org Microdata for Search & AI Agents -->
+  <!-- Structured data mirrors the visible services, contacts and FAQ. -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness", "ElectronicsRepairShop"],
+      "@type": "LocalBusiness",
       "@id": "https://mobileland.kz/#business",
-      "name": "Сервис-центр и телемастерская MOBILAND",
-      "alternateName": ["MOBILAND", "Мобиленд", "Телемастерская MOBILAND Конаев", "Mobileland"],
-      "description": "Профессиональный ремонт телевизоров (замена LED подсветки, плат), компьютеров, ноутбуков и электроники в Конаеве. Диагностика, согласование стоимости до начала ремонта, гарантия до 6 месяцев.",
+      "name": "MOBILAND",
+      "description": "Ремонт телевизоров, телефонов, планшетов, ноутбуков, компьютеров, аудиотехники, принтеров и другой электроники в Конаеве. Стоимость и срок согласуются до ремонта.",
+      "url": "https://mobileland.kz/",
       "telephone": "+77053304436",
-      "priceRange": "₸₸",
-      "paymentAccepted": "Cash, Kaspi QR, Kaspi Gold, Bank Transfer",
-      "currenciesAccepted": "KZT",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "3 микрорайон, 14 дом, 2 квартира",
+        "streetAddress": "3-й микрорайон, дом 14, квартира 2",
         "addressLocality": "Конаев",
-        "addressRegion": "Алматинская область",
-        "postalCode": "040000",
         "addressCountry": "KZ"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 43.8814,
-        "longitude": 77.0755
       },
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
           "opens": "10:00",
           "closes": "14:00"
         },
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
           "opens": "15:00",
           "closes": "19:00"
         }
       ],
-      "areaServed": ["Конаев", "Капшагай"],
-      "url": "https://mobileland.kz/",
+      "areaServed": "Конаев (Капшагай)",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Услуги ремонта техники в Конаеве",
+        "name": "Ремонт техники",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ремонт телевизоров и замена LED подсветки",
-              "description": "Ремонт телевизоров Samsung, LG, Sony, TCL, Philips, Xiaomi. Замена подсветки экрана, ремонт блоков питания и материнских плат.",
-              "areaServed": "Конаев"
+              "name": "Ремонт: телевизоры",
+              "description": "Замена подсветки. Ремонт питания и плат. Восстановление прошивки.",
+              "areaServed": "Конаев",
+              "provider": {
+                "@id": "https://mobileland.kz/#business"
+              }
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ремонт ноутбуков и компьютеров",
-              "description": "Чистка от пыли, замена термопасты, апгрейд SSD, ремонт материнских плат и разъемов.",
-              "areaServed": "Конаев"
+              "name": "Ремонт: телефоны и планшеты",
+              "description": "Замена экрана и аккумулятора. Ремонт разъёма зарядки. Проверка после попадания воды.",
+              "areaServed": "Конаев",
+              "provider": {
+                "@id": "https://mobileland.kz/#business"
+              }
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ремонт смартфонов и планшетов",
-              "description": "Замена экранов, аккумуляторов, разъемов зарядки Type-C и Lightning, чистка после залития.",
-              "areaServed": "Конаев"
+              "name": "Ремонт: ноутбуки и компьютеры",
+              "description": "Чистка и замена термопасты. Установка SSD и перенос системы. Ремонт плат, корпуса и экрана.",
+              "areaServed": "Конаев",
+              "provider": {
+                "@id": "https://mobileland.kz/#business"
+              }
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ремонт аудиотехники и усилителей",
-              "description": "Ремонт портативных колонок JBL, усилителей звука, сабвуферов, устранение треска и гула.",
-              "areaServed": "Конаев"
+              "name": "Ремонт: аудиотехника",
+              "description": "Ремонт усилителей и питания. Замена разъёмов. Ремонт портативных колонок.",
+              "areaServed": "Конаев",
+              "provider": {
+                "@id": "https://mobileland.kz/#business"
+              }
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ремонт принтеров и оргтехники",
-              "description": "Обслуживание принтеров и МФУ Canon, HP, Epson. Устранение замятия бумаги, ремонт узлов подачи.",
-              "areaServed": "Конаев"
+              "name": "Ремонт: принтеры и мфу",
+              "description": "Ремонт подачи бумаги. Обслуживание узла печати. Диагностика принтеров и МФУ.",
+              "areaServed": "Конаев",
+              "provider": {
+                "@id": "https://mobileland.kz/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Другая электроника",
+              "description": "Ремонт электронных плат. Восстановление питания. Замена повреждённых деталей.",
+              "areaServed": "Конаев",
+              "provider": {
+                "@id": "https://mobileland.kz/#business"
+              }
             }
           }
         ]
       }
     },
     {
+      "@type": "WebSite",
+      "@id": "https://mobileland.kz/#website",
+      "name": "MOBILAND",
+      "url": "https://mobileland.kz/",
+      "inLanguage": "ru",
+      "publisher": {
+        "@id": "https://mobileland.kz/#business"
+      }
+    },
+    {
       "@type": "FAQPage",
       "@id": "https://mobileland.kz/#faq",
+      "url": "https://mobileland.kz/#faq",
+      "inLanguage": "ru",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "Можно отказаться от ремонта?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Да. После проведения диагностики вы решаете, нужен ли ремонт. Условия диагностики уточняются перед передачей техники."
+            "text": "Да. После диагностики вы решаете, нужен ли ремонт. Условия диагностики уточните перед передачей техники."
           }
         },
         {
           "@type": "Question",
-          "name": "Как узнать стоимость ремонта телевизора или техники?",
+          "name": "Не знаю, что сломалось. С чего начать?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Свяжитесь с мастерской Mobiland и опишите проблему. Стоимость и срок мастер определяет после диагностики, до начала работ."
+            "text": "Напишите, какая у вас техника и что происходит. Если знаете модель, укажите её. Подскажем, как передать технику на диагностику."
           }
         },
         {
@@ -173,23 +213,47 @@
           "name": "Будете ремонтировать без моего согласия?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Нет. Сначала сообщим точную стоимость и срок. Ремонт начинается только после вашего согласия."
+            "text": "Нет. Сначала сообщим стоимость и срок. Начнём ремонт после вашего согласия. Дополнительные работы обсудим отдельно."
           }
         },
         {
           "@type": "Question",
-          "name": "Какая гарантия предоставляется?",
+          "name": "Как узнать стоимость ремонта?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "От 1 до 6 месяцев в зависимости от вида работы и деталей. Срок и условия указываются в гарантийном талоне."
+            "text": "Свяжитесь с мастерской и опишите проблему. Стоимость и срок мастер определит после диагностики. Фото поможет понять, с чего начать, но не заменит проверку техники."
           }
         },
         {
           "@type": "Question",
-          "name": "Нужно ли сразу везти большой телевизор?",
+          "name": "Сколько времени я буду без техники?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Сначала напишите модель и опишите проблему в WhatsApp. Уточните у мастера, когда привезти телевизор и как его безопасно перевезти, защитив экран от ударов."
+            "text": "Срок зависит от неисправности и наличия деталей. Мастер сообщит его после диагностики, до начала ремонта."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какая гарантия?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "От 1 до 6 месяцев, в зависимости от работы и деталей. Срок и условия укажем в гарантийном талоне."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Нужно сразу везти большой телевизор?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Сначала напишите модель и опишите проблему. Уточните у мастера, когда привезти телевизор и как его перевозить. Защитите телевизор от ударов и давления на экран. Используйте заводскую упаковку, если она сохранилась."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что отправить в мастерскую?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Марку и модель, описание проблемы, фото или короткое видео. Для телевизора полезно фото наклейки с моделью. Разбирать устройство не нужно."
           }
         }
       ]

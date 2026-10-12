@@ -1,22 +1,5 @@
 User-agent: *
 Allow: /
 
-# AI & Search Engines
-User-agent: GPTBot
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
+# Public pages are available to search crawlers, including OAI-SearchBot.
 Sitemap: https://mobileland.kz/sitemap.xml
-# AI Model Documentation
-# https://mobileland.kz/llms.txt
