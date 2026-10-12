@@ -3,13 +3,14 @@
 function toggleMobileMenu(force) {
   const menu = document.getElementById('mobile-menu-dropdown');
   const button = document.getElementById('mobile-menu-btn');
+  if (!menu || !button) return;
   const open = typeof force === 'boolean' ? force : menu.classList.contains('hidden');
   menu.classList.toggle('hidden', !open);
   button.setAttribute('aria-expanded', String(open));
   button.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
 }
 document.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && !document.getElementById('mobile-menu-dropdown').classList.contains('hidden')) {
+  if (event.key === 'Escape' && document.getElementById('mobile-menu-dropdown') && !document.getElementById('mobile-menu-dropdown').classList.contains('hidden')) {
     toggleMobileMenu(false);
     document.getElementById('mobile-menu-btn').focus();
   }
@@ -29,6 +30,7 @@ function checkLiveStatus(now = new Date()) {
   const open = weekday && minutes >= 600 && minutes < 1140 && !lunch;
   const text = open ? `Открыто · до ${minutes < 840 ? '14:00' : '19:00'}` : lunch ? 'Обед · откроемся в 15:00' : part('weekday') === 'Sat' ? 'Суббота · приём по договорённости' : 'Сейчас закрыто · можно написать в WhatsApp';
   const badge = document.getElementById('live-status-badge');
+  if (!badge) return;
   badge.textContent = text;
   badge.className = 'shop-status ' + (open ? 'is-open' : 'is-closed');
 }
@@ -64,7 +66,7 @@ function clearQuickError() {
   error.hidden = true;
   document.getElementById('quick-issue-desc').setAttribute('aria-invalid', 'false');
 }
-document.getElementById('quick-issue-desc').addEventListener('input', clearQuickError);
+document.getElementById('quick-issue-desc')?.addEventListener('input', clearQuickError);
 function updateQuickChips() {
   const list = document.getElementById('quick-issue-chips');
   list.replaceChildren();
@@ -93,15 +95,21 @@ function submitQuickConsultation(event) {
   }
   clearQuickError();
   const message = `Здравствуйте! Нужна консультация по ремонту.\nТехника: ${device}${model ? `\nМодель: ${model}` : ''}\nПроблема: ${issue}\nПодскажите, когда можно привезти технику на диагностику?`;
+  recordContact('whatsapp', 'intake_form');
   window.open(`https://wa.me/77053304436?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
 }
 
 // Record contact intent, without collecting form text, models or phone numbers.
+function recordContact(channel, source = 'link') {
+  if (!['mobileland.kz', 'www.mobileland.kz'].includes(location.hostname)) return;
+  if (typeof startAnalytics === 'function') startAnalytics();
+  if (typeof gtag === 'function') gtag('event', 'contact_click', { contact_channel: channel, contact_source: source });
+  if (typeof ym === 'function') ym(99598032, 'reachGoal', 'contact_' + channel);
+}
 document.addEventListener('click', event => {
   const link = event.target.closest('a');
   if (!link || !['mobileland.kz', 'www.mobileland.kz', 'lemonramis.github.io'].includes(location.hostname)) return;
   const channel = link.href.startsWith('tel:') ? 'phone' : link.href.startsWith('https://wa.me/') ? 'whatsapp' : null;
   if (!channel) return;
-  if (typeof gtag === 'function') gtag('event', 'contact_click', { contact_channel: channel });
-  if (typeof ym === 'function') ym(99598032, 'reachGoal', 'contact_' + channel);
+  recordContact(channel);
 });

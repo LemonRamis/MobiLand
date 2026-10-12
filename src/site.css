@@ -281,3 +281,48 @@ button, input, select { border-radius: var(--radius-control); }
 .consultation-checklist>p { border-top: 1px solid #41536f; padding-top: 20px; margin-top: 24px; color: #c1cee2; font-size: 14px; line-height: 1.75; }
 @media (max-width: 1100px) { .consultation-layout { gap: 32px; } }
 @media (max-width: 767px) { .consultation-layout { grid-template-columns: 1fr; } .consultation-layout h2 { font-size: 28px; } .consultation-actions .button { flex: 1 1 auto; } }
+
+.detail-hero { background: var(--surface); border-bottom: 1px solid var(--line); }
+.detail-intro { padding-block: 40px 56px; }
+.breadcrumbs { display: flex; flex-wrap: wrap; gap: 8px; color: var(--muted); font-size: 13px; margin-bottom: 32px; }
+.breadcrumbs a { text-decoration: underline; text-underline-offset: 3px; }
+.service-detail h1 { font-size: clamp(32px, 4.5vw, 52px); font-weight: 750; line-height: 1.15; letter-spacing: -.035em; max-width: 900px; margin-top: 16px; }
+.service-detail h1 span { color: #1d4ed8; }
+.detail-intro>p:not(.section-kicker):not(.detail-caption) { max-width: 760px; font-size: 18px; line-height: 1.75; color: var(--muted); margin-top: 24px; }
+.detail-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.detail-caption { font-size: 13px; line-height: 1.75; color: var(--muted); margin-top: 20px; }
+.detail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.detail-card { padding: var(--space-card); border: 1px solid var(--line); border-radius: var(--radius-card); }
+.detail-card h3, .detail-location h3 { font-size: 21px; line-height: 1.4; font-weight: 700; letter-spacing: -.02em; }
+.detail-card p { margin-top: 16px; color: var(--muted); line-height: 1.75; }
+.detail-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; }
+.detail-columns h2 { font-size: 32px; line-height: 1.25; font-weight: 700; letter-spacing: -.025em; margin-top: 12px; }
+.detail-list { display: grid; gap: 16px; margin-top: 24px; }
+.detail-list li { position: relative; padding-left: 24px; color: var(--muted); line-height: 1.75; }
+.detail-list li::before { content: "✓"; color: #047857; position: absolute; left: 0; font-weight: 650; }
+.detail-list.numbered { counter-reset: preparation; }
+.detail-list.numbered li { counter-increment: preparation; padding-left: 32px; }
+.detail-list.numbered li::before { content: counter(preparation, decimal-leading-zero); color: #1d4ed8; font-size: 12px; top: 4px; }
+.detail-text { margin-top: 24px; line-height: 1.8; color: var(--muted); }
+.detail-faq { margin-top: 24px; }
+.detail-related { display: flex; flex-wrap: wrap; gap: 8px 32px; margin-top: 16px; }
+.detail-related a { display: inline-flex; align-items: center; min-height: 44px; color: #1d4ed8; text-decoration: underline; text-underline-offset: 4px; }
+.detail-location { padding: var(--space-card); border: 1px solid #41536f; border-radius: var(--radius-card); align-self: start; }
+.detail-location p { margin-top: 16px; }
+.detail-location .detail-related { flex-direction: column; align-items: flex-start; }
+.service-detail .section-dark .detail-text, .service-detail .section-dark .detail-caption, .service-detail .section-dark .detail-location p { color: #c1cee2; }
+.service-detail .section-dark .detail-related a { color: #b2cff7; }
+.service-detail .section-dark .button-phone { border: 1px solid #496080; background: #21314b; }
+@media (max-width: 1100px) { .detail-columns { gap: 32px; } .detail-grid { gap: 16px; } }
+@media (max-width: 767px) {
+  .detail-intro { padding-block: 24px 40px; }
+  .breadcrumbs { margin-bottom: 24px; }
+  .service-detail h1 { font-size: 34px; }
+  .detail-intro>p:not(.section-kicker):not(.detail-caption) { font-size: 16px; }
+  .detail-columns, .detail-grid { grid-template-columns: 1fr; gap: 32px; }
+  .detail-grid { gap: 16px; }
+  .detail-columns h2 { font-size: 28px; }
+  .detail-actions .button { flex: 1 1 auto; }
+  .detail-related { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+@media (max-width: 359px) { .service-detail h1 { font-size: 30px; } }
