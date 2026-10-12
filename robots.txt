@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+# Public pages are available to search crawlers, including OAI-SearchBot.
 Sitemap: https://mobileland.kz/sitemap.xml
